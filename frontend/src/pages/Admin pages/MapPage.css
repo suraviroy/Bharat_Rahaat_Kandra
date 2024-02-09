@@ -1,0 +1,32 @@
+/* Add this CSS to your project's stylesheets */
+
+/* Adjust the position to align to the right and overlap the bottom */
+.leaflet-container {
+  position: absolute;
+  right: 0;
+  margin-bottom: 0.5vh; 
+  height: 78vh;
+  width: 84vw;
+}
+
+.red-alert-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  font-weight: bold;
+}
+
+/* Map.css v */
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 2;
+  }
+}
+
+.circle-pulse81 {
+  animation: fade 2s ease infinite;
+}

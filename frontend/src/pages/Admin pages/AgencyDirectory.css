@@ -1,0 +1,106 @@
+
+.verifications-table8222 {
+    margin-top: 20px; 
+    margin-left: 300px; 
+    width: calc(82% - 40px); 
+    background-color: white;
+  }
+  
+  .verifications-table8222 {
+    background-color: #11b9c8 !important;
+    color: black;
+  }
+  
+  /* .more-info-button91 {
+    background-color: #C177D3; 
+    color: black; 
+  }
+  
+  
+  .popup-container91 {
+    background-color: white; 
+    width: 80%; 
+    max-width: 400px; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .popup-header91 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-button91 {
+    cursor: pointer;
+    font-size: 24px;
+    color: black; 
+  }
+  .verify1347 {
+    margin-left: 52vw;
+    padding-top: 1vh;
+    padding-bottom: 0.5vh;
+    font-size: 4vh;
+    font-weight: bolder;
+  } */
+  .header5679{
+    width: 100vw;
+  }
+  .verify13488 {
+    margin-left: 49vw;
+    padding-top: 1vh;
+    padding-bottom: 0.5vh;
+    font-size: 4vh;
+    font-weight: bolder;
+  }
+  .invertory675{
+    display: flex;
+    flex-direction: row;
+  }
+  .xxx8{
+    color: black;
+  font-size: 2vh;
+  font-weight: bolder;
+  margin-top: 1vh;
+margin-top: -80vh !important;
+  margin-left: 60vw;
+
+  }
+  .popup99019 {
+    /* height: 75vh;
+    width: 55%; */
+    width: 65vw;
+    height: 60vh;
+    background-image: url('https://i.pinimg.com/474x/98/7c/26/987c26f48039e7572dd397e965ebaf1d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* position: absolute;
+    
+    right: 25%; */
+    border: 2px solid black;
+    margin-left: -2vw;
+  }
+  .member-details981 {
+    margin-right: 10px;
+  }
+  
+  .search11 {
+    background-color: #bde3f0 !important;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png") !important;
+    width: 20vw;
+    
+}
+
+.search11::placeholder {
+    color: black;
+}
+.serc101 {
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+  padding-right: 0vw;
+  border-radius: 20;
+  
+} 
+  
+  

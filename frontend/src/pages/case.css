@@ -1,0 +1,51 @@
+.Case12{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    .pic2{
+        height: 255px;
+    }
+    .pic3{
+        height: 255px;
+    }
+
+    .more1{
+        justify-content: center;
+        padding-top: 40px;
+        padding-left: 90px;
+        color: white;
+        & :hover{
+          transform: scale(1.2);  
+        }
+    }
+    .more2{
+        justify-content: center;
+        padding-top: 60px;
+        padding-left: 120px;
+        & :hover{
+            transform: scale(1.2);  
+          }
+    }
+    .more3{
+        justify-content: center;
+        padding-top: 70px;
+        padding-left: 120px;
+
+        & :hover{
+            transform: scale(1.2);  
+          }
+    }
+
+    .animation{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.card3{
+    height: 20vh;
+    
+}
+.but1010{
+    color: white;
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,700&family=Poppins:ital,wght@1,500&display=swap'); */
+/* *{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s ease;
+
+}  */
+
+ /* :root{
+    --PrimaryColor: hsl(230, 77%, 83%);
+    --HoverColor: #efeff6;
+    --bodyColor: hsl(246, 63%, 13%);
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 86%, 39%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(258, 79%, 22%);
+  
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+
+}  */
+
+/* html{
+    font-size: 90%;
+} */
+/* a{
+    text-decoration: none;
+} */
+li{
+    list-style: none;
+}
+/* .icon{
+    font-size: var(--h2FontSize);
+} */
+/* img{
+    width: 100;
+    height: auto;
+} */
+.flex{
+    display: flex;
+    align-items: center;
+}
+.grid{
+    display: flex;
+    align-items: center;
+}
+/* .btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px var(--inputColor);
+    padding: .8rem 1rem;
+    color: var(--textColor);
+}
+.btn .icon{
+    margin-left: .5rem;
+}
+.btn:hover{
+    background: var(--paleGreen);
+    color: var(--PrimaryColor);
+}  */
+/* body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+   
+   background-color: #efeff6;
+   background-size: cover;
+   background-repeat:no-repeat ;
+    
+}*/
+.container01{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  hsl(220, 10%, 94%);
+    overflow: hidden;
+   
+
+}
+/* @media screen and (max-width: 767px) {
+    html {
+        font-size: 80%; 
+    }
+    
+    .container01 {
+        height: auto; 
+    }
+    
+   
+    body {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 0.75rem;
+    }
+    
+   
+}
+
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 90%; 
+    }
+    
+    .container01 {
+       
+    }
+    
+   
+    body {
+        padding: 0rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1rem;
+    }
+}*/

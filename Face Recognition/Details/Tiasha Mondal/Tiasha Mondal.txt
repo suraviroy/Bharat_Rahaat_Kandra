@@ -1,0 +1,11 @@
+Adhar Number - 6789564234
+Address - 13, Behala, Kolkata- 700123
+State - West Bengal
+Phone Number - 6534567821
+Al Phone Number - 9876543210
+DOB - 18/09/2003
+Age - 20
+Gender- Female
+Father Name - Rahul Das
+Mother Name - Rita Das
+Email - tiashamandal21@gmail.com

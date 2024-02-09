@@ -1,0 +1,152 @@
+
+.body90{
+  background-color: #12093f;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    width: 84vw;
+}
+
+.title90 {
+  background-color: #e5e3fc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.sshead34 {
+  font-size: 20px;
+  color: #333;
+}
+.sstitle345{
+  font-size: 18px;
+}
+.sel3456 {
+  width: 50% !important;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.ssform34 {
+  max-width: 100% !important;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #e5daff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.records67 {
+  margin-top: 20px;
+}
+
+.details23 {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.ssinput34 {
+  width: 30% !important;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  
+}
+.ssinput345 {
+  width: 18% !important;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  
+}
+.ssinput3456 {
+  width: 23% !important;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  
+}
+.role34 {
+  display: flex;
+  align-items: center;
+}
+
+.select34 {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ssmember34 {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.ssmember34:hover {
+  background-color: #45a049;
+}
+
+.sssubmit34 {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sssubmit34:hover {
+  background-color: #0077A7;
+}
+
+.sslist56 {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sslist34 {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sslist34 strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .ssinput34,
+  .ssinput345,
+  .ssinput3456 {
+    width: 80% !important;
+  }
+
+ 
+}
+
+

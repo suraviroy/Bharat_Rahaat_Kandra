@@ -1,0 +1,14 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,700&family=Poppins:ital,wght@1,500&display=swap');
+
+.container01{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bgColor);
+    overflow: hidden;
+   
+
+}

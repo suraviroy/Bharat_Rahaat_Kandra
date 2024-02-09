@@ -1,0 +1,111 @@
+.booking-container9800 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+.register9800 {
+    width: 60vw;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-image: url("https://img.freepik.com/free-photo/blue-wall-background_53876-88663.jpg?size=626&ext=jpg&ga=GA1.1.1078602429.1704521589&semt=ais");
+    background-position: 2vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container9800 {
+    margin-top: 6vh;
+}
+
+.form-header9800 {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.form-title9800 {
+    color: white;
+    font-size: 6vh;
+    margin-top: -2vh;
+    color: black;
+    font-weight: bold;
+}
+
+.get-service9800 {
+    font-size: 2vh;
+    color: white;
+    color: black;
+}
+.selected-slot9800{
+    color: black ;
+}
+.pickdate345{
+   margin-left: 2vw;
+}
+.timeselect456{
+    font-size: 3vh;
+    color: white;
+    color: black;
+}
+.booking-form219800 {
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section6529800 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2em;
+    color: black;
+}
+
+.input-group9800 {
+    display: flex;
+    flex-direction: column;
+}
+
+.label9569800 {
+    color: aliceblue;
+    margin-bottom: 0.5em;
+    color: black;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.inputflied1459800 {
+    font-size: 3vh;
+    padding: 1vh;
+}
+
+.date-section9800 {
+    text-align: center;
+}
+.left2679800{
+    display: flex;
+    flex-direction: row;
+}
+.submit-button6579800 {
+    background-color: #003049;
+    color: #e9ecef;
+    font-size: 20px;
+    /* cursor: pointer;
+    padding: 1em; */
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 1vh;
+}
+.time-slot-button9800{
+    margin: 1vh;
+    background-color: blue;
+   
+}

@@ -1,0 +1,18 @@
+.smbody67{
+   
+    display: flex !important;
+    flex-direction: row !important;
+    
+    width: 50vw !important;
+    height: 50vh !important;
+}
+.smap67{
+   /* margin-left: -90vw; */
+    width: 10vw!important;
+    /* height: 100% !important; */
+
+}
+.smbox67{
+   
+    width: 50vw !important;
+}

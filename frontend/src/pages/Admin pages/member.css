@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.errmsg {
+    background-color: lightpink;
+    color: rgb(217, 11, 11);
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.kolo {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+  }
+  
+.polo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly !important;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+    padding-top: 6vh;
+    font-size: 17px;
+    color: rgb(1, 10, 18);
+}
+
+
+.mcard
+{  
+    /* Abh code*/
+    /* left: 100px; */
+    top: 80px;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    backdrop-filter: blur(5rem);    
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);    
+    border-top-color: rgba(225, 225, 225, 0.5);
+    border-left-color: rgba(225, 225, 225, 0.5);
+    border-bottom-color: rgba(225, 225, 225, 0.1);
+    border-right-color: rgba(225, 225, 225, 0.1);
+    /* end abh code*/
+}
+.bgm{
+    width:100vw;
+    height:100vh;
+    /* height:1000px; */
+    background-image: url("https://img.freepik.com/free-vector/blue-curve-background_53876-113112.jpg");
+    background-repeat: repeat;
+  background-size: 100%;
+  background-position: center;
+  overflow:hidden;
+  
+}
+.Appo2{
+    width:40vw;
+    height: 54vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -8vh;
+}
+
+.form_containerAd {
+    font-family: Poppins;
+    display: flex;
+    flex-wrap:wrap;
+    width: 40vw;
+    height: 58vh;
+    color:#000000 ;
+    overflow-wrap:inherit;
+    /* background-color: white; */
+    background-color: rgba(9, 157, 237, 0.855);  
+    backdrop-filter: blur(30px);
+    /* opacity:0.5; */
+    box-shadow: 3px 4px 36px -6px rgba(53, 3, 3, 0.8);
+    border-radius: 50px;
+    text-shadow: 0.3px 0.3px rgb(164, 120, 120);
+    padding-bottom: 5vh;
+    position: relative;
+   
+}
+h1{
+    font-family: Poppins;
+    font-size: large;
+    padding-top: 5vh;
+}
+.buttonAd{
+    width: 10vw;
+    background-color: maroon;
+}
+.containerAd{
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .form_containerAd{
+        width:60vw !important;
+    }
+    .Appo2{
+        width: 60vw !important;
+    }
+}
+@media (max-height: 600px) {
+    .form_containerAd{
+        height:fit-content !important;
+    }
+    .Appo2{
+        height: fit-content !important;
+    }
+}
+.sig{
+    font-size: 30px;
+    color: #fdf8f8;
+}
+.bu22{
+    text-align: center;
+    padding-top: 5vh;
+   margin-right: 2.5vw;
+}
+.bu22:hover{
+    transform: scale(1.2);
+}
+.left{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 10vh;
+   padding-bottom: 4vh;
+    width: 1vw !important;
+    height: 2vh;
+}
+
+/* .vvye{
+    height: 5vh;
+    padding-top: -100vh !important;
+} */
+.back34{
+    display: flex;
+    flex-direction: row;
+}

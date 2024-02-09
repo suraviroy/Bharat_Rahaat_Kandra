@@ -1,0 +1,49 @@
+.leaflet-container01{
+    height: 89vh !important;
+    width: 85vw !important;
+    margin-top: 1vh;
+    /* margin-left: -3vw !important; */
+}
+.red-alert-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+  }
+ 
+ /* Add this CSS to your project's stylesheets */
+/* Map.css */
+@keyframes fade {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 2;
+    }
+  }
+  
+  .circle-pulse {
+    animation: fade 2s ease infinite;
+  }
+  .trbtn01 {
+    display: block;
+    margin-top: 5px;
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px !important;
+    font-size: 0.7rem !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .trbtn01:hover {
+    background-color: #0056b3; 
+  }
+ .mdbbtn978{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }

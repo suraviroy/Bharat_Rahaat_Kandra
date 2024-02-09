@@ -1,0 +1,12 @@
+.mainContent01{
+    width: 82%;
+    height: 100%;
+    padding: .5rem;
+    /* overflow: auto; */
+}
+.bottom01{
+    margin-top: .4rem;
+    gap: 2rem;
+    align-items: flex-start;
+
+}

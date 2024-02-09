@@ -1,0 +1,89 @@
+
+
+.body21 {
+  background-color: #12093f;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  width: 84vw;
+}
+
+
+.form56 {
+  background-color: #e5e3fc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.sel345,
+.input567,
+.cl789,
+.cl890,
+.select567,
+.cl123,
+.cl890 {
+  width: 100% !important;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.title56 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.head45 {
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+}
+
+.label45 {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button215 {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button215:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .sel345,
+  .input567,
+  .cl789,
+  .cl890,
+  .select567,
+  .cl123,
+  .cl890 {
+    width: 80% !important;
+  }
+ 
+  .head45,
+  .label45{
+    width: 30%;
+  }
+  .title56{
+    width: 5%;
+  }
+
+}

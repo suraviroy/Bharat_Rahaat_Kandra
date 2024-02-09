@@ -1,0 +1,75 @@
+.container851 {
+    /* display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    padding-left: 150px;  */
+    display: flex;
+    flex-direction: column;
+    /* width: 50vw;
+    align-items: right; */
+    /* margin-right: -10vw!important; */
+  }
+  
+  .images861 {
+    /* display: flex;
+    
+    align-items: center; 
+    gap: 40px; 
+    margin-bottom: 20px;  */
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vw;
+    /* justify-content: space-around; */
+  }
+  
+  /* img {
+    max-width: 30%; 
+    height: 30vh;
+  }
+  
+  .text {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 150px;
+    width: 300px; 
+    margin-right: 20px; 
+  }
+   */
+   .images141 {
+    width: 25vw; 
+    height: 65vh;
+    margin-left: 7vw;
+    margin-top: 8vh;
+   }
+
+   .text-content88 {
+    margin-left: 5vw;
+    margin-right: -70vw!important;
+   }
+
+   .text87 {
+    width: 20vw;
+   }
+  /* Media query for responsive design (adjust as needed) */
+  /* @media (max-width: 768px) {
+    .container {
+      flex-direction: column; 
+      align-items: flex-end; 
+    }
+  
+    .images {
+      align-items: flex-end; 
+      margin-bottom: 0; 
+    }
+  
+    .text {
+      position: relative; 
+      width: auto; 
+      margin-right: 0; 
+    } */
+  

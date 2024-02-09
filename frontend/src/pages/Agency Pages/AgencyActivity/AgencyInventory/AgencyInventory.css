@@ -1,0 +1,87 @@
+
+.inbody56 {
+   
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+  .inven01 {
+    margin-bottom: 20px;
+  }
+  
+ 
+  .inhead01 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .intable56 {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inthead56 th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .inhentr56 th:last-child {
+    text-align: center;
+  }
+  
+  .inhentbody56 td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+
+  .inhenbutton78 {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .inhenbutton78:hover {
+    background-color: #ff0000;
+  }
+  
+
+  .inven789 {
+    padding: 5px;
+    margin: 5px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+
+  .button456 {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .button456:hover {
+    background-color: #45a049;
+  }
+  
+ 
+  .inven789[type="text"][placeholder="Search"] {
+    border-radius: 20px;
+  }
+  
+ 
+  .inven789[type="file"] {
+    margin-top: 5px;
+  }
+  
+  

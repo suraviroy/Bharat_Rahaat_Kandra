@@ -1,0 +1,32 @@
+.logoDiv12{
+    padding-left: 10px;
+    margin-top: -50px;
+    height: -50px;
+    .tag10{
+        padding-right: 1200px;
+        padding-left: 20px;
+    }
+
+    .Social{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+        justify-content: center;
+        margin-top: -70px;
+        padding-bottom: -100px;
+        padding-left: 50px;
+        padding-top: 1px;
+        .icon{
+            font-size: 32px;
+
+            &:hover{
+                transform: scale(1.4);
+            }
+        }
+    }
+}
+.footer65{
+   margin-left: -6vw;
+   padding-bottom: 2vh;
+}

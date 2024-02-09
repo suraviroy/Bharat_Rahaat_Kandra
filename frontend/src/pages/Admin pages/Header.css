@@ -1,0 +1,35 @@
+/* Header container */
+.header-container77 {
+    background-color: #ffffff; /* White background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  /* Logo styles */
+  .logo77 img {
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  /* Title styles */
+  .title77 h1 {
+    font-size: 24px;
+    color: #000000; /* Black text color */
+    /* display: flex;
+    flex-direction: row; */
+  }
+  
+  /* Personal Logo styles */
+  .personal-logo77 img {
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  /* Adjust padding, margins, font sizes, and other styles as needed */
+  
+/* .img0045{
+  width: 8vw;
+  height: 8vh;
+} */
+  

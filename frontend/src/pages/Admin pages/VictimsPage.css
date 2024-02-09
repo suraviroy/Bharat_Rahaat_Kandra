@@ -1,0 +1,128 @@
+/* VerificationsPage.css */
+
+.victimspage2451 {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 20px;
+    max-width: 210vh;
+    /* Add padding as needed */
+  }
+
+  .vichead2451 {
+    margin-top: -1.8vh !important;
+    width: 100vw;
+    margin-left: -2vw;
+    margin-bottom: 1vh;
+  }
+  
+  .vicverify2451 {
+    margin-left: 42vw;
+    padding-bottom: 2vh;
+    font-size: 4vh;
+    font-weight: bold;
+    color: red;
+  }
+
+  .viccard2451{
+    margin-left: 330px;
+    margin-top: 50px;
+    margin-right: -290px;
+    width: 36.1vh;
+    /* margin: 100px; */
+    /* height: 40vh; */
+    /* width: calc(33.33% - 10px); */
+  }
+
+  .vicbutton1{
+    &:hover{
+      transform: scale(1.05);
+      background-color: red;
+      border-color: red;
+  }
+  }
+
+  .vicbutton2{
+    margin-left: 1vh;
+    width: 15vh;
+    &:hover{
+      transform: scale(1.05);
+      background-color: red;
+      border-color: red;
+  }
+  }
+
+  .vicxxx{
+    margin-left: 95.2vh;
+    background-color: red;
+    border-color: red;
+    width: 6vh;
+    margin-top: -85vh;
+  }
+
+  .vicpopup2451 {
+    width: 48.7vw;
+    height: 60vh;
+    /* border: 1px solid black; */
+    /* background-color: grey; */
+    background-image: url('https://i.pinimg.com/474x/98/7c/26/987c26f48039e7572dd397e965ebaf1d.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .vicdetails2451{
+    margin-left: 4vh;
+  }
+
+  .vicvalue2451{
+    font-weight: bold;
+    margin-bottom: 2vh;
+    margin-top: -1vh;
+  }
+
+  .vicvalue2450{
+    font-weight: bolder;
+    margin-top: 6vh;
+    font-size: x-large;
+  }
+
+  .vicimage2451{
+    height: 25vh;
+    /* width: 30vh; */
+    border: 2px solid black;
+  }
+
+  .vicbody2451{
+    border-bottom: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .vicimg2451{
+    height: 37vh;
+    margin-top: 2.3vh;
+  }
+
+  .vicdetails245{
+    margin-left: 38vh;
+    margin-top: -47vh;
+  }
+
+  .vicvalue2452{
+    font-weight: bolder;
+    margin-top: -1vh;
+    margin-bottom: 2vh;
+    font-size: x-large;
+  }
+
+  .viccard2450{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 64.6vh;
+    max-width: 210vh;
+    overflow-y: auto;
+    margin-left: -80px;
+    
+  }

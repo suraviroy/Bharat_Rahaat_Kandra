@@ -1,0 +1,111 @@
+
+.form-container041 {
+  font-family: 'Verdana', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 18%;
+  padding: 15px;
+  background-image: url("https://res.cloudinary.com/dsnpmhrxj/image/upload/v1706018063/light-color-12_ez1e5d.jpg");
+  background-size: cover;
+  background-color: #fcfbfb;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: 2px solid #f9f9fc; 
+  /* overflow: hidden; */
+  align-items: center;
+  /* max-height:87vh ;
+  overflow-y: auto; */
+
+}
+.photo-section041 {
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+
+}
+
+.photo-upload-label041 {
+  display: block;
+  /* border: 2px dotted #fffefe; */
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 350px;
+ 
+}
+
+.selected-photo041 {
+  
+  max-width: 350px;
+ max-height: 350px;
+  /* outline: 1px solid black; */
+  height: auto;
+  border-radius: 8px;
+}
+
+.upload-placeholder041 {
+  padding: 30px;
+  color: #aaa;
+  font-size: 14px;
+}
+.file-label041{
+  padding: 30px;
+}
+
+.form-section041 {
+  width: 70%;
+  /* height: 85vh; */
+}
+
+
+.form-field041 {
+ 
+  margin-bottom: 4px;
+}
+.form-field041 label {
+  display: block;
+  margin-bottom: 0px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-field041 input,
+.form-field041 select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.form-field041.error input,
+.form-field041.error select {
+  border-color: #ff0000;
+}
+
+.form-head041{
+  font-weight: 800;
+}
+.save041 {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.save041:hover {
+  background-color: #0056b3;
+}
+.error-message041 {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}

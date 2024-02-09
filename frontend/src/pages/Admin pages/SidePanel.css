@@ -1,0 +1,33 @@
+/* SidePanel.css */
+.side-panel78 {
+  background-color: #04904C; /* Set the background color */
+  color: #ffffff; /* Set the text color to white */
+  width: 250px; /* Adjust the width as needed */
+  height:95vh; /* Extend the panel to the full height of the viewport */
+  position: fixed; /* Make the panel fixed to the left side */
+  top: 145px;
+  left: 0;
+  overflow-y: auto; /* Add scrollbar if content overflows */
+  padding: 20px; /* Add padding to the content inside the panel */
+  margin-top: 2vh !important;
+}
+
+.tab78 {
+  margin-bottom: 20px; /* Add spacing between tabs */
+}
+
+/* Style the tab headers (h2 elements) */
+.tab78 h2 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+ 
+}
+
+/* Change tab header background color on hover */
+.tab78 h2:hover {
+  background-color: #04904C;
+}

@@ -1,0 +1,27 @@
+.leaflet-container{
+    height: 100vh;
+    width: 100vw;
+}
+.red-alert-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+  }
+ /* Add this CSS to your project's stylesheets */
+/* Map.css */
+@keyframes fade {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 2;
+    }
+  }
+  
+  .circle-pulse {
+    animation: fade 2s ease infinite;
+  }
+
+ 

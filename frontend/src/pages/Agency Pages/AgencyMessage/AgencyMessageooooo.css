@@ -1,0 +1,93 @@
+
+
+
+.notification-container {
+  display: flex;
+  flex-direction: column;
+ 
+  margin: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.notification-row {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #d2f3aa;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+  width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification-icon {
+  margin-right: 10px;
+  font-size: 24px;
+  color: black;
+}
+
+.notification-content {
+  flex-grow: 1;
+}
+
+ .notip67{
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+}
+
+.view-map-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-map-button:hover {
+  background-color: #0056b3;
+}
+
+
+.view-map-button span {
+  display: inline-flex;
+  align-items: center;
+}
+.view-details-button {
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 10px 20px; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex; 
+  align-items: center; 
+}
+
+.view-details-button:hover {
+  background-color: #45a049;
+}
+
+.view-details-button svg {
+  margin-right: 8px; 
+}
+
+.view-details-button:focus {
+  outline: none; 
+}
+
+.view-details-button:active {
+  background-color: #39843d; 
+}
+
+

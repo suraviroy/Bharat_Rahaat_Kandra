@@ -1,0 +1,91 @@
+/* Center-align the heading and style it in blue */
+.heading1 {
+    text-align: center;
+    color: rgb(7, 7, 248);
+    font-size: 30px;
+  }
+  
+  .earthquake-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Display content stacked vertically */
+    align-items: center; /* Center-align the content horizontally */
+    text-align: center; /* Center-align the text content */
+  
+    /* Additional styling for paragraph text */
+    font-size: 20px;
+    line-height: 1.5;
+    color: black;
+  }
+  
+  /* Style for the image container */
+  .image-container {
+    display: flex;
+    justify-content: space-between; /* Place images side by side */
+    margin: 20px 0; /* Add margin space */
+  }
+  
+  /* Style for the images */
+  .image-container img {
+    max-width: 45%; /* Adjust image size as needed */
+    border: 1px solid #ccc; /* Add a border around the images */
+  }
+  
+  /* Style the "Dos" heading in green */
+  .dos-heading {
+    color: green; /* Set text color to green */
+    margin-bottom: 15px;
+  }
+  
+  /* Style the "Don'ts" heading in red */
+  .donts-heading {
+    color: red; /* Set text color to red */
+    margin-bottom: 15px;
+  }
+  
+  /* Style for the Dos and Don'ts headers */
+  .dosdontearth1 {
+    font-size: 25px;
+    margin: 25px 0;
+  }
+  
+  .styleearth1 {
+    list-style-type: disc; /* Remove bullets from lists */
+    padding-left: 0; /* Remove left padding from lists */
+    text-align: left;
+    
+  }
+  
+  .point1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  
+  }
+  
+  .video-container {
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  /* Style for the video container */
+  .media-video {
+    width: 100%; 
+    height: auto;
+  }
+  .quiz-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .quiz-button:hover {
+    background-color: blue;
+  }
+  

@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  .quizbody{
+    background-image: url(https://www.aljazeera.com/wp-content/uploads/2023/03/339A4PD-highres-1.jpg?resize=1170%2C780&quality=80);
+    height: 100vh;
+  }
+
+  .navBarquiz{
+    background-color: rgb(2, 2, 77);
+    height: max-content;
+    padding: 1px;
+    width: 1536px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 2px 4px rgb(209, 209, 209);
+    transition: .5s ease;
+    z-index: 1000;
+
+    .navListsquiz{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: auto;
+        
+        .navItemquiz1234{
+            padding: 15px;
+            justify-content: center;
+            color: rgb(254, 253, 252);
+
+        }
+        
+        #logout-button{
+            /* padding-left: 100px; */
+            margin-left: 1170px;
+            height: 50px;
+            width: 100px;
+            margin-top: 10px;
+            font-size: larger;
+            font-weight: bold;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-radius: 5px;
+            /* background-color: crimson; */
+            transform: 0.2s;
+        }
+        #logout-button:hover{
+            background-color: red;
+            transform: scale(1.1);
+        }
+        
+    }
+}
+  
+  .quizcontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 400px;
+    width: 1535px;
+    background-color: white;
+    border-radius: 15px;
+    /* box-shadow: 2px 2px 10px 1px rgb(102, 3, 102); */
+    box-shadow: 2px 2px 10px 1px #333;  
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 130px;
+    /* margin-left: 400px; */
+    position: relative;
+  }
+  .heading-txt{
+    color:white;
+    /* color:#276272; */
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;  
+    text-transform: uppercase;
+  }
+  .quizquestion{
+    margin:8px;
+    box-shadow: 0px 0px 10px 1px #a2a3a3;
+    border-radius: 5px;
+    padding:5px;
+    font-size: x-large;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    min-width: 100%;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #question-number{
+    margin-right: 5px;
+  }
+  .option-container1234{
+    display: flex;
+    flex-direction: column;
+    margin:6px 4px;    
+    width: 100%;
+    padding: 10px;
+  }
+  /* .option-container input{
+    visibility: hidden;    
+  } */
+  .option-btn1234{
+    box-shadow: 0px 0px 4px 1px rgb(128, 123, 123);
+    padding: 5px;
+    border-radius: 3px;
+    border:none;
+    outline: none;
+    transition: 0.3s;
+    margin: 5px;
+    min-height: 30px;
+    background-color: white;
+    color: black;
+  }
+  
+  .checked{
+    background-color: rgb(4, 9, 84);
+    color:white;
+    box-shadow: 3px 3px 4px 1px rgb(78, 69, 78);
+  }
+  .option-btn1234:hover{
+    background-color: rgb(4, 9, 84);
+    color:white;
+  }
+  #next-button{
+    padding:10px;
+    border:none;
+    background-color: purple;
+    background-color: #276272;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 1px rgb(127, 109, 109);
+    font-size: larger;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: 0.2s;
+    width:100px;
+    position: absolute;
+    bottom: -5px;
+    margin-bottom: 20px;
+    /* margin-top: 100px; */
+  }
+  #next-button:hover{
+    box-shadow: 3px 3px 2px 1px rgb(127, 109, 109);
+    background-color: rgb(22, 174, 5);   
+    transform: scale(1.1);
+  }
+  .show-score{
+    position: absolute;
+    top:30%;
+    font-size: 40px;
+    text-align: center;  
+  }
+  .timer{
+    color: red;
+    font-size: larger;
+    margin-left: 1300px;
+    margin-bottom: 10px;
+    /* margin-top: -10px; */
+  }
+  
