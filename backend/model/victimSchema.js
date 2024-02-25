@@ -59,6 +59,12 @@ const victimSchema = new mongoose.Schema({
         type: String,
         //default:false
     },
+    Pdate :{
+        type: String
+    },
+    Ptime :{
+        type :String
+    }
 });
 
 
