@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './MissingForm.css';
 import axios from 'axios';
-const dummyImage ='https://i.pinimg.com/736x/87/14/55/8714556a52021ba3a55c8e7a3547d28c.jpg';
+import { ToastContainer, toast } from 'react-toastify';
+const dummyImage = 'https://i.pinimg.com/736x/87/14/55/8714556a52021ba3a55c8e7a3547d28c.jpg';
 
 const MissingForm = () => {
   const [image, setPhoto] = useState(dummyImage);
@@ -16,6 +17,8 @@ const MissingForm = () => {
   const [aadharError, setAadharError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [exist, setexist] = useState(false);
+  const [users, setUsers] = useState([]);
 
   const handlePhotoUpload = (event) => {
     const file = event.target.files[0];
@@ -23,7 +26,7 @@ const MissingForm = () => {
       const reader = new FileReader();
       reader.onloadend = () => {
         setPhoto(reader.result);
-        
+
       };
       reader.readAsDataURL(file);
     }
@@ -67,27 +70,70 @@ const MissingForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    //   // Navigate("/");
+    //   //toast("Form Submitted")
     if (validateForm()) {
-        const {data}  = await axios.post('http://localhost:8080/victimRouter/missingpeople', {
-        name:name,
-          image:image,
-          adharNumber:adharNumber, email: email, phNumber:phNumber,address:address,age:age,
-          gender:gender,category:"Missing"
-          
-      }, {
-        headers: {
-          'Content-Type': 'application/json'
+      try {
+        const { data } = await axios.post('http://localhost:8080/victimRouter/missingpeople', {
+          name: name,
+          image: image,
+          adharNumber: adharNumber,
+          email: email,
+          phNumber: phNumber,
+          address: address,
+          age: age,
+          gender: gender,
+          category: "Missing"
+        }, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        // console.log(data);
+        //console.log(data.message);
+        if (data.message === "User already exists") {
+          console.log("data", data.data);
+          setUsers([data.data])
+          console.log("User does exist");
+          console.log("this is the missing user", (users));
+          setexist(true);
+        } else {
+          setexist(false)
+          console.log("User does not exist");
+          toast("Missing People Registered!");
+          setPhoto(dummyImage);
+          setName('');
+          setAadhar('');
+          setPhone('');
+          setEmail('');
+          setAddress('');
+          setAge('');
+          setGender('');
         }
+      } catch (error) {
+        console.error("An error occurred:", error.message);
       }
-    )
-    // const data1 = await response.json();
-    // console.log(data1);
-    console.log(data);}
-    // Navigate("/");
-    //toast("Form Submitted")
+    }
+  };
+  const handleSubmitCancle =(event) => {
+    
+      setPhoto(dummyImage);
+
+      setName('');
+      setAadhar('');
+      setPhone('');
+      setEmail('');
+      setAddress('');
+      setAge('');
+      setGender('');
+   
   };
 
-  
+  const PopupCloseMissing = () => {
+    setexist(false);
+
+  };
   // const handleSubmit = (event) => {
   //   event.preventDefault();
   //   if (validateForm()) {
@@ -116,21 +162,21 @@ const MissingForm = () => {
 
   return (
     <div className="form-container041">
-    <div className="photo-section041">
-      <label htmlFor="photo-upload" className="photo-upload-label041">
-        <img
-          src={image}
-          alt="Selected"
-          className="selected-photo041"
-        />
-        <input className='file-label041'
-          type="file"
-          id="photo-upload"
-          accept="image/*"
-          onChange={handlePhotoUpload}
-        />
-      </label>
-    </div>
+      <div className="photo-section041">
+        <label htmlFor="photo-upload" className="photo-upload-label041">
+          <img
+            src={image}
+            alt="Selected"
+            className="selected-photo041"
+          />
+          <input className='file-label041'
+            type="file"
+            id="photo-upload"
+            accept="image/*"
+            onChange={handlePhotoUpload}
+          />
+        </label>
+      </div>
       <div className="form-section041">
         <h2 className='form-head041'>Register Missing Person</h2>
         <form >
@@ -219,8 +265,56 @@ const MissingForm = () => {
           </div>
 
           <button className='save041' type="submit" onClick={handleSubmit}>Submit</button>
+          <button className='save042' type="cancle" onClick={handleSubmitCancle}>Cancle</button>
+          {exist && (
+            <div className="popup-background171">
+            <div className="popup" style={{ width: '50vw', height: '70vh',backgroundImage: "url('https://static.storyweaver.org.in/illustrations/58816/search/3.jpg')", backgroundSize: 'cover' }}>
+                {Array.isArray(users) && users.map((user) => (
+                  <div >
+                    <p className='found145'>ALREADY  FOUND</p>
+                    <img src={user.image} alt="detect" ></img>
+                    <div >
+                      <p className='close171'  onClick={PopupCloseMissing}>X</p>
+                      <div className='innerdiv171'>
+                        <div className='divide171'>
+                        <div >Name: {user.name}</div>
+                        <div >Aadhar Number: {user.adharNumber}</div>
+                        <div >Address: {user.address}</div>
+                        <div >Found on Date: {user.Pdate}</div>
+                        <div >Time: {user.Ptime}</div>
+                        </div>
+                        <div className='line171'></div>
+                        <div className='devidee171'>
+                        <div >DOB: {user.dob}</div>
+                        <div >Gender: {user.gender}</div>
+                        <div >Father Name: {user.fatherName}</div>
+                        <div >Mother Name: {user.motherName}</div>
+                        <div >State: {user.state}</div>
+                        
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                ))}
+              </div>
+              </div>
+          )}
         </form>
       </div>
+      <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
     </div>
   );
 };

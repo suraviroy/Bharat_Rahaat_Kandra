@@ -60,7 +60,7 @@ const VictimsPage = () => {
       <div className='cols-row-md-3 viccard2450' style={{width: '96rem'}}>
       {users.map((user)=>(
       <Card className='viccard2451'>
-      <Card.Img variant="top" src={`data:image/png;base64,${user.image}`} className='vicimage2451'/>
+      <Card.Img variant="top" src={user.image} className='vicimage2451'/>
       <Card.Body className='vicbody2451'>
         <Card.Title>Name: {user.name}</Card.Title>
         <Card.Text>
@@ -74,19 +74,21 @@ const VictimsPage = () => {
                         <div className='vicpopup2451'>
                           <div className='vicdetails2451'>
                             <div className='vicvalue2450'>Picture:</div>
-                            <img className='vicimg2451' src={`data:image/png;base64,${user.image}`}></img>
+                            <img className='vicimg2451' src={user.image}></img>
                             <br></br>
                             <br></br>
                             <div className='vicdetails245'>
                             <div className='vicvalue2452'>Details:</div>
-                            <div className='vicvalue2451'>Name of Victim: {user.name}</div>
-                            <div className='vicvalue2451'>Contact Number: {user.phNumber}</div>
-                            <div className='vicvalue2451'>Alternate Contact Number: {user.alPhNumber}</div>
-                            <div className='vicvalue2451'>Email ID: {user.email}</div>
-                            <div className='vicvalue2451'>Aadhar Number: {user.adharNumber}</div>
-                            <div className='vicvalue2451'>Address: {user.address}</div>
-                            {/* <div className='vicvalue2451'>Pin Code: {user.}</div> */}
-                            <div className='vicvalue2451'>State: {user.state}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Name of Victim: </div>{user.name}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Contact Number: </div>{user.phNumber}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Alternate Contact Number: </div>{user.alPhNumber}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Email ID: </div>{user.email}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Aadhar Number: </div>{user.adharNumber}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Address: </div>{user.address}</div>
+                            {/* <div className='vicvalue2453'><div className='vicvalue2451'>Pin Code: </div></div> */}
+                            <div className='vicvalue2453'><div className='vicvalue2451'>State: </div>{user.state}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Date: </div>{user.Pdate}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Time: </div>{user.Ptime}</div>
                             </div>
                           </div>
 
@@ -95,7 +97,6 @@ const VictimsPage = () => {
                             X
                           </Button>
                         </div>
-
                       )
                     }
                   </Popup>

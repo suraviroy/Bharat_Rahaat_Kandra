@@ -10,6 +10,7 @@ import re
 import io
 # import cloudinary
 # import cloudinary.uploader
+import datetime
 import pymongo
 import base64
 import tkinter as tk
@@ -126,10 +127,18 @@ def insert_data(name3, loading_window):
     fatherName = matches[8]
     motherName = matches[9]
     email = matches[10]
+    current_datetime = datetime.datetime.now()
+
+    current_date = current_datetime.date()
+    current_time = current_datetime.time()
+
+
+    formatted_date = current_date.strftime("%d-%m-%Y")
+    formatted_time = current_time.strftime("%H:%M:%S")
 
     victim_data = {
         "name": name3,
-        "adharNumber": adharNumber,
+        "adharNumber": int(adharNumber),
         "address": address,
         "state": state,
         "phNumber": phNumber,
@@ -140,8 +149,10 @@ def insert_data(name3, loading_window):
         "fatherName": fatherName,
         "motherName": motherName,
         "email": email,
-        "image": final_str,
-        "category": "victim"
+        "image": "data:image/png;base64,"+final_str,
+        "category": "victim",
+        "Pdate": formatted_date,
+        "Ptime": formatted_time
     }
 
     print("sending")

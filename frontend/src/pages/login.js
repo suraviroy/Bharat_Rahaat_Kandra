@@ -51,12 +51,12 @@ function Login() {
         <div className="container1001" >
             <h1 className="heading1001">Log in Form</h1>
             <div className="form_container1001">
-                {/* <div className="left1001">
-                    <img className="img1001" src="https://res.cloudinary.com/dosofpk8l/image/upload/v1694109626/brk_logo_dotpbx.png"  alt="login" />
-                </div> */}
                 <div className="left1001">
-                    <img className="img1001" src="https://res.cloudinary.com/dawra1qcb/image/upload/v1697809509/WhatsApp_Image_2023-10-14_at_20.46.23-removebg-preview_gzycof.png"  alt="login" />
+                    <img className="img1001" src="https://res.cloudinary.com/dosofpk8l/image/upload/v1694109626/brk_logo_dotpbx.png"  alt="login" />
                 </div>
+                {/* <div className="left1001">
+                    <img className="img1001" src="https://res.cloudinary.com/dawra1qcb/image/upload/v1697809509/WhatsApp_Image_2023-10-14_at_20.46.23-removebg-preview_gzycof.png"  alt="login" />
+                </div> */}
                 <div className="right1001">
                     <h2 className="from_heading1001">Members Log in</h2>
                     <input type="text"
