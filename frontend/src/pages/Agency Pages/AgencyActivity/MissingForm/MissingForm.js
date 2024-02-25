@@ -134,31 +134,6 @@ const MissingForm = () => {
     setexist(false);
 
   };
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   if (validateForm()) {
-  //     console.log({
-  //       image,
-  //       name,
-  //       adharNumber,
-  //       phNumber,
-  //       email,
-  //       address,
-  //       age,
-  //       gender,
-  //     });
-
-  //     setPhoto(dummyImage);
-
-  //     setName('');
-  //     setAadhar('');
-  //     setPhone('');
-  //     setEmail('');
-  //     setAddress('');
-  //     setAge('');
-  //     setGender('');
-  //   }
-  // };
 
   return (
     <div className="form-container041">

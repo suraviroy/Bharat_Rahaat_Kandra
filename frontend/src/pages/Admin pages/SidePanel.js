@@ -63,16 +63,16 @@ const SidePanel = () => {
       <div className="tab78" onClick={handleSendAlerts}>
         <h2>Send Alerts</h2>
       </div>
-
+      <div className="tab78" onClick={handleAffect}>
+        <h2>Affected People</h2>
+      </div>
       {/* Reports and Statistics */}
       <div className="tab78" onClick={handleStats}>
         <h2>Reports and Statistics</h2>
       </div>
 
       {/* Incident Management */}
-      <div className="tab78" onClick={handleAffect}>
-        <h2>Affected People</h2>
-      </div>
+      
 
       {/* Inventory Management */}
       <div className="tab78">
