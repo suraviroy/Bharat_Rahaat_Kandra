@@ -32,6 +32,7 @@ import FormAwness from "./pages/Awareness/FormAwness";
 import BookingSlots from "./pages/Awareness/BookingSlots";
 import MissingFormmain from "./pages/Agency Pages/AgencyActivity/MissingForm/MissingFormMain";
 import VictimsPage from "./pages/Admin pages/VictimsPage";
+import MissingList from "./pages/Admin pages/missing";
 
 
 function App() {
@@ -176,6 +177,11 @@ function App() {
           exact
           path="/VictimsPage"
           element={<VictimsPage />}
+        />
+        <Route
+          exact
+          path="/missingpeopleList"
+          element={<MissingList />}
         />
       </Routes>
     </div>

@@ -64,6 +64,9 @@ const victimSchema = new mongoose.Schema({
     },
     Ptime :{
         type :String
+    },
+    recogniseBy:{
+        type: String
     }
 });
 

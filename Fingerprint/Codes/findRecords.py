@@ -153,7 +153,7 @@ def insert_data(name3, loading_window):
         "category": "victim",
         "Pdate": formatted_date,
         "Ptime": formatted_time,
-        "recogniseBy":"Face"
+        "recogniseBy":"Finger Print"
     }
 
     print("sending")
@@ -218,4 +218,4 @@ def sentInfo(name3):
     insert_data(name3, loading_window)
 
 # Example usage
-record1("Suravi Roy")
+#record1("Suravi Roy")

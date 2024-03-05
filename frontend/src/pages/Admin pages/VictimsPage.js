@@ -89,6 +89,7 @@ const VictimsPage = () => {
                             <div className='vicvalue2453'><div className='vicvalue2451'>State: </div>{user.state}</div>
                             <div className='vicvalue2453'><div className='vicvalue2451'>Date: </div>{user.Pdate}</div>
                             <div className='vicvalue2453'><div className='vicvalue2451'>Time: </div>{user.Ptime}</div>
+                            <div className='vicvalue2453'><div className='vicvalue2451'>Recognized By: </div>{user.recogniseBy}</div>
                             </div>
                           </div>
 

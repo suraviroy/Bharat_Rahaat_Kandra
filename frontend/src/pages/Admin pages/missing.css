@@ -1,0 +1,147 @@
+.table-heading779 {
+  margin-left: 48vw;
+  color: #002b2e;
+  margin-top: 20px;
+}
+
+.table780 {
+  width: 80vw;
+  margin-top: 0.2vh;
+  margin-left: 18vw;
+  border-collapse: collapse;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.row781 {
+  display: flex;
+  width: 100%;
+}
+
+.header782 {
+  font-weight: bold;
+  background-color: #002b2e;
+  color: white;
+}
+
+.cell783:first-child {
+  flex: 0 0 7%;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.cell783:not(:first-child) {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.cell783 button {
+  background-color: #002b2e;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.cell783 button:hover785 {
+  background-color: #005f61;
+}
+
+.profile-image786 img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.custom-popup790 {
+  width: 70vw;
+  max-width: 600px;
+  height: auto;
+ 
+}
+
+.popup-content791 {
+  display: flex;
+ 
+}
+
+.left-half792 {
+  flex: 1;
+  background-color: #002b2e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-half793 {
+  flex: 1;
+  background-color: white;
+  color: black;
+  position: relative;
+}
+
+.blue-background794 {
+  padding: 20px;
+  text-align: center;
+}
+
+.white-background795 {
+  padding: 20px;
+}
+
+.content-wrapper796 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.missing-text797 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.profile-picture798 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.profile-picture798 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.profile-picture798 {
+ margin-left: 1vw;
+}
+.name799 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.info-wrapper800 {
+  text-align: left;
+}
+
+.info-item801 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.close-button802 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 700;
+  color: #002b2e ;
+}

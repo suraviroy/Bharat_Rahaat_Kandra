@@ -2,10 +2,10 @@
 import os
 import cv2
 import matplotlib.pyplot as plt
-
+from findRecords import record1
 # Define the path to the sample fingerprint image
 # sample_path = "C:\\Users\\fingerprint\\SOCOFing\\Altered\\Altered-Hard\\4__M_Left_index_finger_CR.BMP"
-sample_path = "C:/hackathon/SIH/Fingerprint/dataset/test/1__M_Right_thumb_finger_Zcut.BMP"
+sample_path = "C:/hackathon/SIH/Fingerprint/dataset/test/right_Tiasha.BMP"
 # sample_path = "C:\\Users\\fingerprint\\SOCOFing\\Altered\\Altered-Medium\\4__M_Right_middle_finger_Obl.BMP"
 sample = cv2.imread(sample_path)
 
@@ -68,15 +68,19 @@ for counter, file in enumerate(os.listdir(real_images_dir)):
 print("Best match:", best_filename)
 print("Best score:", best_score)
 
+
 # Display the best match result if it exists
 if best_mp:
     result = cv2.drawMatches(sample, best_kp1, best_image, best_kp2, best_mp, None)
     result = cv2.resize(result, None, fx=5, fy=5)
     image = cv2.cvtColor(result, cv2.COLOR_BGR2RGB)
-    plt.imshow(image)
-    plt.title("Best Match")
-    plt.axis("off")
-    plt.show()
+    personName = os.path.splitext(best_filename)[0]
+    print("Best match:", personName)
+    record1(personName)
+    # plt.imshow(image)
+    # plt.title("Best Match")
+    # plt.axis("off")
+    # plt.show()
 
 # Optionally, you can save the best match result as an image
 # if best_filename:

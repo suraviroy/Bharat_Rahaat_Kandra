@@ -34,6 +34,10 @@ const SidePanel = () => {
     history('/VictimsPage');
    
   }
+  const handleMissing =() =>{
+    history('/missingpeopleList');
+   
+  }
 
   return (
     <aside className="side-panel78">
@@ -66,18 +70,16 @@ const SidePanel = () => {
       <div className="tab78" onClick={handleAffect}>
         <h2>Affected People</h2>
       </div>
+      <div className="tab78" onClick={handleMissing}>
+        <h2>Missing People List</h2>
+      </div>
       {/* Reports and Statistics */}
       <div className="tab78" onClick={handleStats}>
         <h2>Reports and Statistics</h2>
       </div>
 
-      {/* Incident Management */}
+     
       
-
-      {/* Inventory Management */}
-      <div className="tab78">
-        <h2>Inventory Management</h2>
-      </div>
 
       {/* Grants and Funding */}
       <div className="tab78">

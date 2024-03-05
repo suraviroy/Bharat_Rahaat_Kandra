@@ -74,6 +74,9 @@ const MissingForm = () => {
     //   //toast("Form Submitted")
     if (validateForm()) {
       try {
+        const currentDate = new Date(); // Get the current date and time
+        const date = currentDate.toISOString().split('T')[0]; // Get the date part
+        const time = currentDate.toTimeString().split(' ')[0]; // Get the time part
         const { data } = await axios.post('http://localhost:8080/victimRouter/missingpeople', {
           name: name,
           image: image,
@@ -83,7 +86,9 @@ const MissingForm = () => {
           address: address,
           age: age,
           gender: gender,
-          category: "Missing"
+          category: "Missing",
+          Pdate: date,
+          Ptime : time
         }, {
           headers: {
             'Content-Type': 'application/json'
@@ -116,18 +121,18 @@ const MissingForm = () => {
       }
     }
   };
-  const handleSubmitCancle =(event) => {
-    
-      setPhoto(dummyImage);
+  const handleSubmitCancle = (event) => {
 
-      setName('');
-      setAadhar('');
-      setPhone('');
-      setEmail('');
-      setAddress('');
-      setAge('');
-      setGender('');
-   
+    setPhoto(dummyImage);
+
+    setName('');
+    setAadhar('');
+    setPhone('');
+    setEmail('');
+    setAddress('');
+    setAge('');
+    setGender('');
+
   };
 
   const PopupCloseMissing = () => {
@@ -243,29 +248,29 @@ const MissingForm = () => {
           <button className='save042' type="cancle" onClick={handleSubmitCancle}>Cancle</button>
           {exist && (
             <div className="popup-background171">
-            <div className="popup" style={{ width: '50vw', height: '70vh',backgroundImage: "url('https://static.storyweaver.org.in/illustrations/58816/search/3.jpg')", backgroundSize: 'cover' }}>
+              <div className="popup" style={{ width: '50vw', height: '70vh', backgroundImage: "url('https://static.storyweaver.org.in/illustrations/58816/search/3.jpg')", backgroundSize: 'cover' }}>
                 {Array.isArray(users) && users.map((user) => (
                   <div >
                     <p className='found145'>ALREADY  FOUND</p>
                     <img src={user.image} alt="detect" ></img>
                     <div >
-                      <p className='close171'  onClick={PopupCloseMissing}>X</p>
+                      <p className='close171' onClick={PopupCloseMissing}>X</p>
                       <div className='innerdiv171'>
                         <div className='divide171'>
-                        <div >Name: {user.name}</div>
-                        <div >Aadhar Number: {user.adharNumber}</div>
-                        <div >Address: {user.address}</div>
-                        <div >Found on Date: {user.Pdate}</div>
-                        <div >Time: {user.Ptime}</div>
+                          <div >Name: {user.name}</div>
+                          <div >Aadhar Number: {user.adharNumber}</div>
+                          <div >Address: {user.address}</div>
+                          <div >Found on Date: {user.Pdate}</div>
+                          <div >Time: {user.Ptime}</div>
                         </div>
                         <div className='line171'></div>
                         <div className='devidee171'>
-                        <div >DOB: {user.dob}</div>
-                        <div >Gender: {user.gender}</div>
-                        <div >Father Name: {user.fatherName}</div>
-                        <div >Mother Name: {user.motherName}</div>
-                        <div >State: {user.state}</div>
-                        
+                          <div >DOB: {user.dob}</div>
+                          <div >Gender: {user.gender}</div>
+                          <div >Father Name: {user.fatherName}</div>
+                          <div >Mother Name: {user.motherName}</div>
+                          <div >State: {user.state}</div>
+
                         </div>
                       </div>
 
@@ -274,22 +279,22 @@ const MissingForm = () => {
                   </div>
                 ))}
               </div>
-              </div>
+            </div>
           )}
         </form>
       </div>
       <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-            />
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
