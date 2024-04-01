@@ -6,7 +6,7 @@ import SidePanel from './SidePanel';
 import Card from "react-bootstrap/Card";
 import Button from 'react-bootstrap/Button';
 import Popup from 'reactjs-popup';
-
+import emailjs from '@emailjs/browser';
 
 
 const VictimsPage = () => {
@@ -48,8 +48,46 @@ const VictimsPage = () => {
     getUsers();
   }, [])
 
-  function sendmail(name,email){
-    console.log(name,email)
+  async function sendmail(name,email, adharNumber){
+   // console.log(name,email,adharNumber)
+    const hiddenForm = document.createElement('form');
+    hiddenForm.style.display = 'none';
+
+    // Add input fields for your data
+    const emailInput = document.createElement('input');
+    emailInput.type = 'text';
+    emailInput.name = 'email';
+    emailInput.value = email;
+    hiddenForm.appendChild(emailInput);
+
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.name = 'name';
+    nameInput.value = name;
+    hiddenForm.appendChild(nameInput);
+
+    const numberInput = document.createElement('input');
+    numberInput.type = 'number';
+    numberInput.name = 'adharNumber';
+    numberInput.value = adharNumber;
+    hiddenForm.appendChild(numberInput);
+    //console.log(hiddenForm.password.value)
+
+
+    document.body.appendChild(hiddenForm);
+    await emailjs.sendForm(
+      "service_w9nxahv",
+      "template_p63ytpf",
+      hiddenForm,
+      "9CaZP6pOITX6wmz0k"
+
+    )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    document.body.removeChild(hiddenForm);
   }
 
   return (
@@ -101,7 +139,7 @@ const VictimsPage = () => {
                       )
                     }
                   </Popup>
-        <Button variant="primary" className='vicbutton2' onClick={() =>{sendmail(user.name,user.email)}}>Send</Button>
+        <Button variant="primary" className='vicbutton2' onClick={() =>{sendmail(user.name,user.email,user.adharNumber)}}>Send</Button>
       </Card.Body>
     </Card>
     ))}

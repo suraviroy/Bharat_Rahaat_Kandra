@@ -178,19 +178,19 @@ def show_loading():
 
 
 def record1(name):
-    
+    print("name",name)
     root=Tk()
     root.title('Details')
     root.geometry("1000x550")
-    bg = PhotoImage(file = 'C:/hackathon/SIH/Face Recognition/Resources/detail.png')
-    label1 = Label(root, image = bg)
-    label1.place(x = 0, y = 0)
+    # bg = PhotoImage(file = 'C:/hackathon/SIH/Face Recognition/Resources/detail.png')
+    # label1 = Label(root, image = bg)
+    # label1.place(x = 0, y = 0)
     
 
     filee='C:/hackathon/SIH/Face Recognition/Images/'+name+'.png'
-    bg3 = PhotoImage(file = filee)
-    label4 = Label(root, image = bg3,highlightbackground="#33CCFF", highlightthickness=5)
-    label4.place(x = 25, y = 70)
+    # bg3 = PhotoImage(file = filee)
+    # label4 = Label(root, image = bg3,highlightbackground="#33CCFF", highlightthickness=5)
+    # label4.place(x = 25, y = 70)
     label = Label(root, text = name, fg = "Red",font=("times new roman",20, "bold"))  
     label.place(x=50, y=330) 
 

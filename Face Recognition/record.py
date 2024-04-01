@@ -218,4 +218,4 @@ def sentInfo(name3):
     insert_data(name3, loading_window)
 
 # Example usage
-record1("Suravi Roy")
+#record1("Suravi Roy")
