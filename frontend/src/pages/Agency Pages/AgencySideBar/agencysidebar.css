@@ -209,8 +209,8 @@ z-index: 9999;
 }
 .modalContainer012{
 background-color: rgb(255, 255, 255);
-max-width: 500px;
-height: 300px;
+max-width: 50vwpx;
+height: 70vhpx;
 
 position: fixed;
 top: 350px;
@@ -223,7 +223,7 @@ box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .detectimage012{
 width: 200px;
-height: 300px;
+height: 50vh;
 object-fit: cover;
 
 
@@ -271,9 +271,19 @@ background-color: #5c2300;
 margin-bottom: 10px;
 
 }
+.register013{
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #413f0a;
+  margin-bottom: 10px;
+  
+  }
 .register012:hover{
 background-color: #cc5206;
 }
+.register013:hover{
+  background-color: #b79602;
+  }
 /* Responsive Styles for Desktop */
 @media (min-width: 768px) {
 .top26 {

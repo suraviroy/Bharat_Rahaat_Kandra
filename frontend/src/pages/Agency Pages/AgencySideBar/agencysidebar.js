@@ -609,7 +609,7 @@ const [showOthersPopup, setShowOthersPopup] = useState(false);
         <button className='list012'>Missing People List</button>
         <button className='detect012' onClick={FaceRecognition}>Face Detection</button>
         <button className='register012'  onClick={BiometricRecognition}>Biometric Recognition</button>
-        <button className='register012'  onClick={MissingPeople}>Register Missing People</button>
+        <button className='register013'  onClick={MissingPeople}>Register Missing People</button>
         </div>
         </div>
 
