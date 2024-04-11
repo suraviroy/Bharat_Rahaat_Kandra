@@ -20,7 +20,7 @@
 }
 
 .form-container9800 {
-    margin-top: 6vh;
+    margin-top: 4vh;
 }
 
 .form-header9800 {
@@ -29,9 +29,9 @@
 }
 
 .form-title9800 {
+    margin-top: 0.5vh;
     color: white;
-    font-size: 6vh;
-    margin-top: -2vh;
+    font-size: 5vh;
     color: black;
     font-weight: bold;
 }
@@ -40,6 +40,7 @@
     font-size: 2vh;
     color: white;
     color: black;
+    font-weight: 500;
 }
 .selected-slot9800{
     color: black ;
@@ -64,7 +65,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     color: black;
 }
 
@@ -77,13 +78,15 @@
     color: aliceblue;
     margin-bottom: 0.5em;
     color: black;
-    font-size: larger;
-    font-weight: 700;
+    font-size: 2.5vh;
+    font-weight: 500;
 }
 
 .inputflied1459800 {
     font-size: 3vh;
-    padding: 1vh;
+    padding: 0.5vh;
+    border-radius: 3px;
+    border-color: none;
 }
 
 .date-section9800 {
@@ -96,13 +99,16 @@
 .submit-button6579800 {
     background-color: #003049;
     color: #e9ecef;
-    font-size: 20px;
+    font-size: 2.5vh;
+    width: 10vw;
+   
+    
     /* cursor: pointer;
     padding: 1em; */
     border: none;
-    border-radius: 5px;
+    border-radius: 1.5vh;
     outline: none;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
 }
 .time-slot-button9800{
     margin: 1vh;

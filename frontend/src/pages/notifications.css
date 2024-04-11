@@ -1,0 +1,137 @@
+.notifbody{
+    flex: 1;
+    padding-bottom: 5vh;
+    overflow-x: hidden;
+}
+.alertbody13{
+    display: flex;
+    flex-direction: column; /* Display content stacked vertically */
+    align-items: center;
+}
+.lang2451{
+    margin-left: 85vw;
+    margin-top: 2vh;
+}
+.alertcard1{
+    border: 3px solid #e01b1b;
+    border-radius: 10px;
+    height: 35vh;
+    margin-top: 3vh;
+    width: 97vw;
+    /* margin-left: 2vh; */
+    /* animation: blink-animation 2s infinite; */
+    background-color: wheat;
+}
+.alertcard2{
+    border: 3px solid #e01b1b;
+    border-radius: 10px;
+    height: 35vh;
+    margin-top: 5vh;
+    width: 97vw;
+    /* margin-left: 2vh; */
+    background-color: wheat;
+}
+.alertcard3{
+    border: 3px solid #e01b1b;
+    border-radius: 10px;
+    height: 35vh;
+    margin-top: 5vh;
+    width: 97vw;
+    /* margin-left: 2vh; */
+    background-color: wheat;
+}
+.notifpic{
+    width: 28vh;
+    height: 28vh;
+    border-radius: 100px;
+    margin-top: 3vh;
+    margin-left: 3vh;
+}
+.notifCont{
+    display: flex;
+    flex-direction: row;
+}
+.notifText{
+    margin-top: 2vh;
+    margin-left: 6vh;
+}
+.notifLast{
+    border-top: 2px solid rgb(122, 121, 121);
+    width: 175vh;
+    margin-top: 2vh;
+    color: rgb(100, 99, 99);
+}
+.notifText13{
+    width: 130vh;
+}
+.notifText12{
+    display: flex;
+    flex-direction: row;
+}
+.earthpic{
+    width: 40vh;
+    height: 25vh;
+    /* border: 1px solid; */
+    border-radius: 10px;
+    margin-left: 2vh;
+}
+.helpButton13{
+    margin-left: 50vw;
+    margin-top: 1vh;
+
+    .helpButton14{
+        background-color: red;
+        border: 1px solid var(--blackColor);
+        &:hover{
+            background-color: rgb(3, 111, 16);
+            color: white;
+            transform: scale(1.1);
+        }
+    }
+}
+.helppopupbg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(8px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.helppopup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.helpnumList{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+.closeBut13{
+    margin-top: 3vh;
+    margin-left: 12vh;
+}
+.emerhelp{
+    border-bottom: 2px solid rgb(122, 121, 121);
+    padding-bottom: 1vh;
+    color: rgb(93, 92, 92);
+    align-self: center;
+}
+
+
+@keyframes blink-animation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

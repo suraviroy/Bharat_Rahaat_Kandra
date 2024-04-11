@@ -28,6 +28,9 @@
 }
 
 /* Change tab header background color on hover */
-.tab78 h2:hover {
+/* .tab78 h2:hover {
   background-color: #04904C;
+} */
+.active-tab {
+  border-bottom: 1px solid white;
 }

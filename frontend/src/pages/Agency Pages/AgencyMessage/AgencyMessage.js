@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import addNotification from 'react-push-notification';
 import Popup from 'reactjs-popup';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function AgencyMessage() {
   const Navigate = useNavigate();
@@ -27,6 +28,7 @@ function AgencyMessage() {
   const [alert1, setalert1] = useState([]);
   const [alertnumber, setalertnumber] = useState(0);
   const [aler, setaler] = useState(0);
+  const [foodAmount, setFoodAmount] = useState('');
 
   //   React.useEffect(() => {
   //     async function handleData() {
@@ -72,10 +74,8 @@ function AgencyMessage() {
     })
     const data = await response.json();
     setalert1(data.data);
-    console.log(data.data.length);
     if (data.data.length !== alertnumber) {
       setaler(aler + 1);
-      console.log("aler" + aler);
       setalertnumber(data.data.length)
       //alert("new alert");
       // toast("Alert send!");
@@ -85,6 +85,34 @@ function AgencyMessage() {
 
     }
   }
+  async function ClickFoodAmountChange(id, people) {
+    try {
+      const response = await fetch(`http://localhost:8080/alertRouter/UpdatePeople/${id}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ customResourceType: people - foodAmount }) 
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        console.log(data.message); 
+      } else {
+        console.error(data.message); 
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+    finally{
+      setFoodAmount('')
+    }
+  }
+
+  const handleFoodAmountChange = (event) => {
+    setFoodAmount(event.target.value);
+
+  };
 
   React.useEffect(() => {
     getUsers();
@@ -146,7 +174,9 @@ function AgencyMessage() {
                     modal nested>
                     {
                       close => (
-                        <div className='pop871' >
+                        <div className='pop871' style={{
+                          paddingLeft: "10px"
+                        }}>
 
                           <div className='gov32' >
                             {user.alertsender}
@@ -158,18 +188,42 @@ function AgencyMessage() {
                             <div >Email : {user.email} </div>
                             <div >Address :  {user.address} </div>
                             <div className='resourcse753' >
-                             Resource Need:
+                              Resource Need:
                               {user.selectedResourceTypes.map((resource, index) => (
                                 <div key={index}>{resource} ,</div>
                               ))}
                             </div>
                             <div >Number of People :  {user.customResourceType} </div>
+                            <div style={{
+                              fontWeight: "bold",
+                              marginTop: "15px"
+                            }}>Do You want to Help them? </div>
+                            <div style={{
+                              width: "400px"
+                            }}>
+                              <Form.Control type="text" placeholder="How Many People Food You Can provide?"
+                                value={foodAmount}
+                                onChange={handleFoodAmountChange} />
+                            </div>
                           </div>
 
-                          <Button className='xxx00' onClick=
-                            {() => close()}>
-                            close
-                          </Button>
+                          <div style={{
+                            marginTop: "20px",
+                            paddingBottom: "10px"
+                          }} >
+                            <Button className='xxx00' variant="danger" style={{
+                              marginRight: "20px"
+                            }} onClick=
+                              {() => close()}>
+                              close
+                            </Button>
+                            <Button className='xxx00' variant="success" onClick={() => {
+                              ClickFoodAmountChange(user._id, user.customResourceType);
+                              close();
+                            }}>
+                              Accept
+                            </Button>
+                          </div>
                         </div>
                       )
                     }

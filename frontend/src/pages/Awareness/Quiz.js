@@ -1,15 +1,16 @@
-
 import React, { useState, useEffect } from 'react';
 import { QuizData } from './Quizdata';
-import QuizResult from './Quizresult';
+import QuizResult from './Quizresult'
 import "./Quiz.css";
+import LanguageOption from './language-dropdown';
 
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [clickedOption, setClickedOption] = useState(0);
   const [showResult, setShowResult] = useState(false);
-  const [timer, setTimer] = useState(10); // Set initial timer value to 10 seconds
+  const [timer, setTimer] = useState(10);
+  const [language, setLanguage] = useState('en');
 
   useEffect(() => {
     let interval;
@@ -22,6 +23,10 @@ function Quiz() {
     }
     return () => clearInterval(interval);
   }, [timer, showResult]);
+
+  const handleChangeLanguage = (e) => {
+    setLanguage(e.target.value);
+  };
 
   const changeQuestion = () => {
     updateScore();
@@ -53,25 +58,24 @@ function Quiz() {
       <div className='navBarquiz'>
         <div className='navListsquiz flex'>
           <div className='navItemquiz1234'>
-            <h2><b>QUIZ PORTAL</b></h2>
+            <h2><b>{language === 'en' ? 'QUIZ PORTAL' : language === 'hi' ? 'क्विज़ पोर्टल' : 'কুইজ পোর্টাল'}</b></h2>
           </div>
-          <a href='/'><input type="button"  value="Logout" id="logout-button" /></a>
+          <LanguageOption onChange={handleChangeLanguage} />
+          <a href='/'><input type="button" value={language === 'en' ? 'Log out' : language === 'hi' ? 'लोग आउट' : 'লগ আউট'} id="logout-button" /></a>
         </div>
       </div>
 
-
-
       <div className="quizcontainer">
-      <div className="timer">
-            Time left: {timer} seconds
-      </div>
+        <div className="timer">
+          {language === 'en' ? 'Time left' : language === 'hi' ? 'बचा हुआ समय' : 'বাকি সময়'}: {timer} {language === 'en' ? 'seconds' : language === 'hi' ? 'सेकंड' : 'সেকেন্ড'}
+        </div>
         {showResult ? (
-          <QuizResult score={score} totalScore={QuizData.length} tryAgain={resetAll} />
+          <QuizResult score={score} totalScore={QuizData.length} tryAgain={resetAll} language={language} />
         ) : (
           <>
             <div className="quizquestion">
               <span id="question-number">{currentQuestion + 1}. </span>
-              <span id="question-txt">{QuizData[currentQuestion].question}</span>
+              <span id="question-txt">{QuizData[currentQuestion][`question_${language}`]}</span>
             </div>
             <div className="option-container1234">
               {QuizData[currentQuestion].options.map((option, i) => {
@@ -81,12 +85,12 @@ function Quiz() {
                     key={i}
                     onClick={() => setClickedOption(i + 1)}
                   >
-                    {option}
+                    {option[`text_${language}`]}
                   </button>
                 )
               })}
             </div><br></br><br></br>
-            <input type="button" value="Next" id="next-button" onClick={changeQuestion} />
+            <input type="button" value={language === 'en' ? 'Next' : language === 'hi' ? 'अगला' : 'পরবর্তী'} id="next-button" onClick={changeQuestion} />
           </>
         )}
       </div>
@@ -95,3 +99,6 @@ function Quiz() {
 }
 
 export default Quiz;
+
+
+

@@ -28,11 +28,12 @@ import Earthquake from "./pages/Awareness/earthquake";
 import UserPlatform from "./pages/Awareness/UserPlatform";
 import Quiz from "./pages/Awareness/Quiz";
 import UserCertificate from "./pages/Awareness/UserCertificate";
-import FormAwness from "./pages/Awareness/FormAwness";
+// import FormAwness from "./pages/Awareness/FormAwness";
 import BookingSlots from "./pages/Awareness/BookingSlots";
 import MissingFormmain from "./pages/Agency Pages/AgencyActivity/MissingForm/MissingFormMain";
 import VictimsPage from "./pages/Admin pages/VictimsPage";
 import MissingList from "./pages/Admin pages/missing";
+import Notifications from "./pages/notifications";
 
 
 function App() {
@@ -121,6 +122,11 @@ function App() {
           exact
           path="/Feedpage"
           element={<Feedpage />}
+        />
+         <Route
+          exact
+          path="/notification"
+          element={<Notifications />}
         />
         <Route
           exact

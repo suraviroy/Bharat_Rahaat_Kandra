@@ -34,9 +34,9 @@
         
         #logout-button{
             /* padding-left: 100px; */
-            margin-left: 1170px;
+            margin-left: 60vw;
             height: 50px;
-            width: 100px;
+            width: 10vw;
             margin-top: 10px;
             font-size: larger;
             font-weight: bold;

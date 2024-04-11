@@ -1,0 +1,39 @@
+.time-slot-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .time-slot-button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #3498db;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .time-slot-button:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .time-slot-button.selected {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .selected-slot {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3498db;
+  }

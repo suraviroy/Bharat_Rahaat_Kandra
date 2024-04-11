@@ -95,5 +95,16 @@ const sendalert = async (req, res) => {
       console.log(error);
     }
   }
-
-module.exports = {sendalert,MapAlert,notification,foodalert};
+  const UpdatePeople=async(req,res)=>{
+    const id = req.params.id; 
+    const customResourceType = req.body.customResourceType;
+    const finduser = await Alert.updateOne({ _id: id },{$set:{customResourceType: customResourceType}});
+    if (finduser) {
+      return res.status(200).json({ message: "updated" });
+    }
+    else {
+  
+      res.status(400).json({ message: "bad req"})
+    }
+  }
+module.exports = {sendalert,MapAlert,notification,foodalert,UpdatePeople};

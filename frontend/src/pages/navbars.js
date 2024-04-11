@@ -68,7 +68,7 @@ const Navbars = () => {
                     <a href='/UserPlatform' className='navLink'>Awareness</a>
                 </div>
                 <div  className='navItem4'>
-                    <a href='#' className='navLink'>Notifications</a>
+                    <a href='/notification' className='navLink'>Notifications</a>
                 </div>
                 <div  className='navItem5'>
                     <a href='/Feedpage' className='navLink'>Feed Page</a>

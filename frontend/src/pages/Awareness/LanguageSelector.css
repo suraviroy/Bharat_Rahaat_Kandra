@@ -1,0 +1,21 @@
+.language-selector {
+    display: inline-flex; /* Use inline-flex to keep icon and select element in one line */
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  .language-icon {
+    margin-right: 5px;
+    color: blue;
+  }
+  
+  select {
+    border: none; 
+    padding: 0; 
+    margin: 0; 
+    outline: none;
+  }
+  

@@ -16,6 +16,14 @@ def trigger_notification():
         return jsonify({'message': 'Notification triggered successfully'})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
+@app.route("/biometric-recognition")
+def trigger_biometric():
+    try:
+        subprocess.run(["python", "C:/hackathon/SIH/Fingerprint/Codes/takeFingerprint.py"], check=True)
+        return jsonify({'message': 'Notification triggered successfully'})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 if __name__ == '__main__':

@@ -22,7 +22,7 @@ export default function Feedpage() {
   return (
     <div>  
      <div className='nabbbar45'> <Navbars /></div>
-        <MDBCard style={{ maxWidth: '1500px' }} className='card681'>
+        <MDBCard style={{ maxWidth: '1500px' , overflowY:"hidden"}} className='card681'>
       <div className='anim1' data-aos='fade-right'>
       <MDBRow className='g-0'>
         <MDBCol md='4'>
@@ -31,12 +31,11 @@ export default function Feedpage() {
         <MDBCol md='8'>
           <MDBCardBody className='text1'>
             <MDBCardTitle><h2>MAHARASTRA FLOODS</h2></MDBCardTitle>
-            <MDBCardText>
+            <MDBCardText style={{width:"55vw"}}>
             The National Disaster Response Force (NDRF) has enhanced the number of its teams from 26 to 34 for undertaking rescue operations in the coastal areas of Maharashtra that have been hit by landslides and floods triggered by torrential rains.
             The NDRF teams have rescued about 1,800 stranded people and evacuated 87 people to safer places till now, he said.
             The force is constantly tracking the India Meteorological Department's weather forecast and the Central Water Commission's report with regard to Mumbai and coastal districts of the Konkan region in Maharashtra that are witnessing heavy rainfall since the last few days, the spokesperson said.
             An NDRF team usually has 47 personnel and they are equipped with life-saving equipment, inflatable boats and tree and pole cutters.
-            <br></br>
             <br></br>
             <a href='https://www.indiatvnews.com/news/india/maharashtra-mayhem-raigad-ratnagiri-kolhapur-floods-rains-landslides-uddhav-thackeray-visit-death-toll-imd-latest-news-721747'><b>VIEW MORE</b></a>
             </MDBCardText>
@@ -53,9 +52,10 @@ export default function Feedpage() {
         <MDBCol md='8'>
           <MDBCardBody className='text2'>
           <MDBCardTitle><h2>NEPAL EARTHQUAKE</h2></MDBCardTitle>
-            <MDBCardText>
+            <MDBCardText style={{width:"60vw"}}>
             Seven teams, comprising 305 personnel equipped with rescue gear and sniffer dogs, left for Kathmandu in two batches. The first batch of a single team reached the devastated Nepal capital at 6 pm while the rest in the second batch landed three hours later. NDRF quickly got in touch with the Nepal army to understand the ground situation.
             Within hours of reaching the quake-hit region, NDRF pulled out seven survivors from beneath the debris. The next day, three more teams of NDRF joined in.
+            India now had 748 people, including NDRF personnel and a few doctors, toiling to help the quake-hit Nepal. The next day, three more teams of NDRF joined in.
             India now had 748 people, including NDRF personnel and a few doctors, toiling to help the quake-hit Nepal.
             <br></br>
             <br></br>
@@ -80,7 +80,7 @@ export default function Feedpage() {
         <MDBCol md='8'>
           <MDBCardBody className='text3'>
             <MDBCardTitle><h2>TURKEY EARTHQUAKE</h2></MDBCardTitle>
-            <MDBCardText>
+            <MDBCardText style={{width:"55vw"}}>
             Three teams of NDRF were running the rescue operations in Turkey. According to the information received, the three teams of NDRF cleared 30 work sites in Nurdagi and Hatay, in which 2 lives were saved and around 75 dead bodies had been removed from the debris.
             Multiple NDRF teams including women rescuers and doctors were sent to Turkey after a powerful earthquake hit Turkey last week.
             The Prime Minister Narendra Modi-led Indian  government had decided to send the teams for rescue and relief operations in Turkey. The entire operation is being termed as 'Operation Dost'. The Government of India has offered all possible assistance to Turkey.
@@ -97,7 +97,7 @@ export default function Feedpage() {
       </div>
 
       <MDBRow className='row-cols-2 row-cols-md-3 g-4'>
-      <div className='anim4' data-aos='flip-right'>
+      <div className='anim4' data-aos='flip-right' >
       <MDBCol>
         <MDBCard className='h-101'>
           <MDBCardImage className='pic4'

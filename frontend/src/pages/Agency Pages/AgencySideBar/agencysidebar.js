@@ -302,8 +302,6 @@ const [showOthersPopup, setShowOthersPopup] = useState(false);
    Navigate("/MissingFormMain")
     };
     const FaceRecognition = () => {
-     console.log('Notification receivedddddd:');
-     console.log('Notification receivedddddd:');
      fetch('http://127.0.0.1:5000/face-recognition')
      .then(response => response.json())
      .then(data => {
@@ -313,6 +311,17 @@ const [showOthersPopup, setShowOthersPopup] = useState(false);
        console.error('Error triggering notification:', error);
      });
      };
+     const BiometricRecognition = () => {
+      setShowDetectPopup(false);
+      fetch('http://127.0.0.1:5000/biometric-recognition')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Notification triggeredddd:', data.message);
+      })
+      .catch(error => {
+        console.error('Error triggering notification:', error);
+      });
+      };
 
   return (
     <div className='agencysideBar flex'>
@@ -599,6 +608,7 @@ const [showOthersPopup, setShowOthersPopup] = useState(false);
         <div className='btnContainer012'>
         <button className='list012'>Missing People List</button>
         <button className='detect012' onClick={FaceRecognition}>Face Detection</button>
+        <button className='register012'  onClick={BiometricRecognition}>Biometric Recognition</button>
         <button className='register012'  onClick={MissingPeople}>Register Missing People</button>
         </div>
         </div>
