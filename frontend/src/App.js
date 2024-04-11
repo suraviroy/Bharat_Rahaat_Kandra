@@ -34,6 +34,7 @@ import MissingFormmain from "./pages/Agency Pages/AgencyActivity/MissingForm/Mis
 import VictimsPage from "./pages/Admin pages/VictimsPage";
 import MissingList from "./pages/Admin pages/missing";
 import Notifications from "./pages/notifications";
+import MissingListmain from "./pages/Agency Pages/AgencyActivity/MissingList/MissingListMain";
 
 
 function App() {
@@ -178,6 +179,11 @@ function App() {
           exact
           path="/MissingFormMain"
           element={<MissingFormmain />}
+        />
+         <Route
+          exact
+          path="/MissingListMain"
+          element={<MissingListmain />}
         />
         <Route
           exact

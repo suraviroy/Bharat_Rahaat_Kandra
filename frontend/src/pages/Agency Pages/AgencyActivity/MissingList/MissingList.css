@@ -1,0 +1,150 @@
+.table-heading7798 {
+    /* margin-left: 3-vw; */
+    color: #002b2e;
+    margin-top: 2vh;
+    margin-left: 30vw;
+    padding: 0.7vw;
+    /* overflow-x: hidden; */
+  }
+  
+  .table7808 {
+    width: 79vw;
+    margin-top: 0.2vh;
+    margin-left: 2vw;
+    border-collapse: collapse;
+    max-height: 65vh;
+    overflow-y: auto;
+  }
+  
+  .row7818 {
+    display: flex;
+    width: 100%;
+  }
+  
+  .header7828 {
+    font-weight: bold;
+    background-color: #002b2e;
+    color: white;
+  }
+  
+  .cell7838:first-child {
+    flex: 0 0 7%;
+    border: 1px solid #ddd;
+    padding: 0.7vw;
+  }
+  
+  .cell7838:not(:first-child) {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 0.7vw;
+  }
+  
+  .cell7838 button {
+    background-color: #002b2e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .cell7838 button:hover785 {
+    background-color: #005f61;
+  }
+  
+  .profile-image7868 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .custom-popup7908 {
+    width: 70vw;
+    max-width: 600px;
+    height: auto;
+   
+  }
+  
+  .popup-content7918 {
+    display: flex;
+   
+  }
+  
+  .left-half7928 {
+    flex: 1;
+    background-color: #002b2e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-half7938 {
+    flex: 1;
+    background-color: white;
+    color: black;
+    position: relative;
+  }
+  
+  .blue-background7948 {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .white-background7958 {
+    padding: 20px;
+  }
+  
+  .content-wrapper7968 {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .missing-text7978 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .profile-picture7988 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .profile-picture7988 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+  .profile-picture7988 {
+   margin-left: 1vw;
+  }
+  .name7998 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .info-wrapper8008 {
+    text-align: left;
+  }
+  
+  .info-item8018 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+  }
+  
+  .close-button8028 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    color: #002b2e ;
+  }

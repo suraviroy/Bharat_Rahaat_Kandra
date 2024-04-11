@@ -21,6 +21,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 import detect from "../../../images/group.gif"
+import MissingListmain from '../AgencyActivity/MissingList/MissingListMain';
 
 
 const Agencysidebar = (props) => {
@@ -297,7 +298,9 @@ const [showOthersPopup, setShowOthersPopup] = useState(false);
     console.log('Other Support Text:', otherSupportText);
     closeOthersPopup();
   };
-  
+  const AgencyMissingList = () => {
+    Navigate("/MissingListMain")
+     }; 
   const MissingPeople = () => {
    Navigate("/MissingFormMain")
     };
@@ -606,7 +609,7 @@ const [showOthersPopup, setShowOthersPopup] = useState(false);
       <div className='modalRight012'>
         <p className='closebtn012' onClick={FaceDetectPopupClose}>X</p>
         <div className='btnContainer012'>
-        <button className='list012'>Missing People List</button>
+        <button className='list012' onClick={AgencyMissingList}>Missing People List</button>
         <button className='detect012' onClick={FaceRecognition}>Face Detection</button>
         <button className='register012'  onClick={BiometricRecognition}>Biometric Recognition</button>
         <button className='register013'  onClick={MissingPeople}>Register Missing People</button>

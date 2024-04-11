@@ -50,7 +50,7 @@ const MissingForm = () => {
       setAadharError(false);
     }
 
-    if (!phNumber || !/^\+91\d{10}$/.test(phNumber)) {
+    if (!phNumber || !/^\d{10}$/.test(phNumber)) {
       isValid = false;
       setPhoneError(true);
     } else {
