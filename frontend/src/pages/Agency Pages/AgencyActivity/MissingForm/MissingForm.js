@@ -245,7 +245,7 @@ const MissingForm = () => {
           </div>
 
           <button className='save041' type="submit" onClick={handleSubmit}>Submit</button>
-          <button className='save042' type="cancle" onClick={handleSubmitCancle}>Cancle</button>
+          <button className='save042' type="cancle" onClick={handleSubmitCancle}>Cancel</button>
           {exist && (
             <div className="popup-background171">
               <div className="popup" style={{ width: '50vw', height: '70vh', backgroundImage: "url('https://static.storyweaver.org.in/illustrations/58816/search/3.jpg')", backgroundSize: 'cover' }}>

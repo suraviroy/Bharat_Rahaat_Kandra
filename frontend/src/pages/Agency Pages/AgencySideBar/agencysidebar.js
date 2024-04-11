@@ -612,9 +612,7 @@ const [showOthersPopup, setShowOthersPopup] = useState(false);
         <button className='register013'  onClick={MissingPeople}>Register Missing People</button>
         </div>
         </div>
-
     </div>
-
   </div>
 )}
   {showOthersPopup && (
