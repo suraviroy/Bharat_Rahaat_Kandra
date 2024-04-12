@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './AgencyMessage.css';
 import { AiTwotoneAlert } from 'react-icons/ai';
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
@@ -85,7 +85,7 @@ function AgencyMessage() {
 
     }
   }
-  async function ClickFoodAmountChange(id, people) {
+  async function ClickFoodAmountChange(id, people, alertsender, email) {
     try {
       const response = await fetch(`http://localhost:8080/alertRouter/UpdatePeople/${id}`, {
         method: 'POST',
@@ -107,6 +107,53 @@ function AgencyMessage() {
     finally{
       setFoodAmount('')
     }
+    const name = window.localStorage.getItem("name");
+    const phno = window.localStorage.getItem("phno");
+    console.log(name, email, foodAmount,phno);
+
+    const hiddenForm = document.createElement('form');
+    hiddenForm.style.display = 'none';
+
+    const emailInput = document.createElement('input');
+    emailInput.type = 'text';
+    emailInput.name = 'email';
+    emailInput.value = email;
+    hiddenForm.appendChild(emailInput);
+
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.name = 'name';
+    nameInput.value = name;
+    hiddenForm.appendChild(nameInput);
+
+    const foodAmountInput = document.createElement('input');
+    foodAmountInput.type = 'text';
+    foodAmountInput.name = 'foodAmount';
+    foodAmountInput.value = foodAmount;
+    hiddenForm.appendChild(foodAmountInput);
+
+    const phnoInput = document.createElement('input');
+    phnoInput.type = 'text';
+    phnoInput.name = 'phno';
+    phnoInput.value = phno;
+    hiddenForm.appendChild(phnoInput);
+
+    document.body.appendChild(hiddenForm);
+    await emailjs.sendForm(
+      "service_w9nxahv",
+      "template_gixct9i",
+      hiddenForm,
+      "9CaZP6pOITX6wmz0k"
+
+    )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    document.body.removeChild(hiddenForm);
+    toast("Food Request Accepted!")
+
   }
 
   const handleFoodAmountChange = (event) => {
@@ -145,6 +192,7 @@ function AgencyMessage() {
   return (
     <div className="notification-container">
       {alert1.map((user) => (
+        user.customResourceType !== "0" && (
         <div className="notification-row" >
           <div className="notification-icon">
             <AiTwotoneAlert alt="Notification Icon" />
@@ -218,13 +266,14 @@ function AgencyMessage() {
                               close
                             </Button>
                             <Button className='xxx00' variant="success" onClick={() => {
-                              ClickFoodAmountChange(user._id, user.customResourceType);
+                              ClickFoodAmountChange(user._id, user.customResourceType, user.alertsender, user.email);
                               close();
                             }}>
                               Accept
                             </Button>
                           </div>
                         </div>
+                     
                       )
                     }
                   </Popup>
@@ -233,8 +282,9 @@ function AgencyMessage() {
               </div> </p>
           </div>
         </div>
+      )
       ))}
-      {/* <ToastContainer
+      <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -245,7 +295,7 @@ function AgencyMessage() {
         draggable
         pauseOnHover
         theme="dark"
-      /> */}
+      />
     </div>
   );
 }

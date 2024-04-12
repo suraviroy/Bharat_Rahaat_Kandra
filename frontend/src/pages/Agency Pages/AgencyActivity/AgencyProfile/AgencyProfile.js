@@ -24,11 +24,13 @@ const AgencyProfile = () => {
 
         .request(options)
         .then((response) => {
-          console.log(response);
+          console.log(response.data.contactNumber);
           // const data = response.json();
           // setUsers(response.data);
           setAccess(response);
           window.localStorage.setItem("id",response.data.storU);
+          window.localStorage.setItem("name",response.data.nagency);
+          window.localStorage.setItem("phno",response.data.contactNumber);
           if (response.data) {
             //setAccess(response.data);
 
