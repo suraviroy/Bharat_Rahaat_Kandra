@@ -10,14 +10,14 @@
     .pic1{
         border-radius: 2px 16px;
         /* height: 200px; */
-        width: 600px;
+        width: 90vw;
         height: 50vh;
         
     }
     .text1{
         display: flex;
         flex-direction: column;
-        padding-left: 70px;
+        margin-left: 60px;
         width: 750px;
     }
 }
@@ -29,7 +29,20 @@
     margin-left: 70px;
     padding-bottom: 50px;
     border-bottom: 3px solid #cac8c8;
-    
+    width: 130vw;
+    /* padding-right: -100px; */
+    .pic256{
+        
+        border-radius: 2px 16px;
+        /* height: 200px; */
+        width: 60vw;
+        height: 50vh;
+        margin-left: 905px;
+        margin-top: -320px;
+        border: none;
+        /* padding-right: -400px; */
+
+    }
     .text2{
         display: flex;
         flex-direction: column;
@@ -37,16 +50,8 @@
         margin-top: 10px;
         width: 700px;
     }
-    .pic2{
-        
-        /* border-radius: 2px 16px; */
-        /* height: 200px; */
-        width: 100vw !important;
-        height: 45vh;
-        margin-left: 1000px;
-        margin-top: -350px;
-
-    }
+    
+    
 }
 
 .g-2{
@@ -60,9 +65,8 @@
 
     .pic3{
         border-radius: 2px 16px;
-        /* height: 200px; */
-        width: 600px;
         height: 50vh;
+        width: 600px;
     }
     .text3{
         display: flex;
@@ -107,4 +111,8 @@
 }
 .card681{
     margin-right: -4vw;
+}
+.pic2_56{
+    margin-left: 50vw;
+    width: 60vw;
 }

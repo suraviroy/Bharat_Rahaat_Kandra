@@ -47,7 +47,7 @@ const VictimsPage = () => {
 
   React.useEffect(() => {
     getUsers();
-  }, [])
+  }, )
 
   async function sendmail(name, email, adharNumber) {
     // console.log(name,email,adharNumber)
