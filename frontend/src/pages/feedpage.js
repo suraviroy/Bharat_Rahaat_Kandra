@@ -17,6 +17,34 @@ import './feedpage.css';
 import Navbars from './navbars';
 import LanguageSelector from './Awareness/language-dropdown';
 const languageContent = {
+  sl: {
+    title1: 'MAHARASTRA FLOODS',
+    content1: `The National Disaster Response Force (NDRF) has enhanced the number of its teams from 26 to 34 for undertaking rescue operations in the coastal areas of Maharashtra that have been hit by landslides and floods triggered by torrential rains.
+    The NDRF teams have rescued about 1,800 stranded people and evacuated 87 people to safer places till now, he said.
+    The force is constantly tracking the India Meteorological Department's weather forecast and the Central Water Commission's report with regard to Mumbai and coastal districts of the Konkan region in Maharashtra that are witnessing heavy rainfall since the last few days, the spokesperson said.
+    An NDRF team usually has 47 personnel and they are equipped with life-saving equipment, inflatable boats and tree and pole cutters.`,
+    link1: 'VIEW MORE',
+    title2: 'NEPAL EARTHQUAKE',
+    content2: `Seven teams, comprising 305 personnel equipped with rescue gear and sniffer dogs, left for Kathmandu in two batches. The first batch of a single team reached the devastated Nepal capital at 6 pm while the rest in the second batch landed three hours later. NDRF quickly got in touch with the Nepal army to understand the ground situation.
+    Within hours of reaching the quake-hit region, NDRF pulled out seven survivors from beneath the debris. The next day, three more teams of NDRF joined in.
+    India now had 748 people, including NDRF personnel and a few doctors, toiling to help the quake-hit Nepal.`,
+    link2: 'VIEW MORE',
+    title3: 'TURKEY EARTHQUAKE',
+    content3: `Three teams of NDRF were running the rescue operations in Turkey. According to the information received, the three teams of NDRF cleared 30 work sites in Nurdagi and Hatay, in which 2 lives were saved and around 75 dead bodies had been removed from the debris.
+    Multiple NDRF teams including women rescuers and doctors were sent to Turkey after a powerful earthquake hit Turkey last week.
+    The Prime Minister Narendra Modi-led Indian  government had decided to send the teams for rescue and relief operations in Turkey.`,
+    link3: 'VIEW MORE',
+    title4: 'CYCLONE BIPARJOY',
+    content4: `A total of 33 teams have been earmarked by the National Disaster Response Force (NDRF) to undertake relief and rescue operations in Gujarat and Maharashtra ahead of the expected landfall of cyclone 'Biparjoy' near the Jakhau port in Kutch district, officials said on Wednesday.`,
+    link4: 'VIEW MORE',
+    title5: 'KERALA FLOODS',
+    content5: `“Black August”, this is how a National Disaster Response Force (NDRF) crew, dressed in Orange jumpsuits, upon their return from Kerala described the havoc caused by the floods. Narrating their ordeal of a week when at times they were without food, these men trained in disaster relief and rescue had been witness to several natural disasters but with 11 out of 14 districts of Kerala submerged under water, they were in for one of the worst floods in a century.`,
+    link5: 'VIEW MORE',
+    title6: 'ALL FEMALE TEAM',
+    content6: `In yet another example of shattering of the proverbial glass ceiling, the first batch of over 100 women disaster combatants and rescuers has been inducted in the country’s federal calamity force NDRF.
+    An all-female team of freshly trained National Disaster Response Force (NDRF) personnel was recently deployed for contingency duties on the banks of the Ganga river in Uttar Pradesh’s Garh Mukteshwar town, a senior force officer said.`,
+    link6: 'VIEW MORE'
+  },
   en: {
     title1: 'MAHARASTRA FLOODS',
     content1: `The National Disaster Response Force (NDRF) has enhanced the number of its teams from 26 to 34 for undertaking rescue operations in the coastal areas of Maharashtra that have been hit by landslides and floods triggered by torrential rains.

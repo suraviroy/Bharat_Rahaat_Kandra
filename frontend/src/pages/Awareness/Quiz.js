@@ -58,16 +58,18 @@ function Quiz() {
       <div className='navBarquiz'>
         <div className='navListsquiz flex'>
           <div className='navItemquiz1234'>
-            <h2><b>{language === 'en' ? 'QUIZ PORTAL' : language === 'hi' ? 'क्विज़ पोर्टल' : 'কুইজ পোর্টাল'}</b></h2>
+            {/* <h2><b>{language === 'en' ? 'QUIZ PORTAL' : language === 'hi' ? 'क्विज़ पोर्टल' : 'কুইজ পোর্টাল'}</b></h2> */}
+            <h2><b>{language === 'be' ? 'কুইজ পোর্টাল' : language === 'hi' ? 'क्विज़ पोर्टल' : 'QUIZ PORTAL'}</b></h2>
+
           </div>
           <LanguageOption onChange={handleChangeLanguage} />
-          <a href='/'><input type="button" value={language === 'en' ? 'Log out' : language === 'hi' ? 'लोग आउट' : 'লগ আউট'} id="logout-button" /></a>
+          <a href='/'><input type="button" value={language === 'be' ? 'লগ আউট' : language === 'hi' ? 'लोग आउट' : 'Log out'} id="logout-button" /></a>
         </div>
       </div>
 
       <div className="quizcontainer">
         <div className="timer">
-          {language === 'en' ? 'Time left' : language === 'hi' ? 'बचा हुआ समय' : 'বাকি সময়'}: {timer} {language === 'en' ? 'seconds' : language === 'hi' ? 'सेकंड' : 'সেকেন্ড'}
+          {language === 'be' ? 'বাকি সময়' : language === 'hi' ? 'बचा हुआ समय' : 'Time Left'}: {timer} {language === 'be' ? 'সেকেন্ড' : language === 'hi' ? 'सेकंड' : 'seconds'}
         </div>
         {showResult ? (
           <QuizResult score={score} totalScore={QuizData.length} tryAgain={resetAll} language={language} />
@@ -81,16 +83,16 @@ function Quiz() {
               {QuizData[currentQuestion].options.map((option, i) => {
                 return (
                   <button
-                    className={`option-btn1234 ${clickedOption === i + 1 ? "checked" : null}`}
+                  className={`option-btn1234 ${clickedOption === i + 1 ? "checked" : null}`}
                     key={i}
                     onClick={() => setClickedOption(i + 1)}
                   >
-                    {option[`text_${language}`]}
+                   {option[`text_${language}`]}
                   </button>
                 )
               })}
             </div><br></br><br></br>
-            <input type="button" value={language === 'en' ? 'Next' : language === 'hi' ? 'अगला' : 'পরবর্তী'} id="next-button" onClick={changeQuestion} />
+            <input type="button" value={language === 'be' ? 'পরবর্তী' : language === 'hi' ? 'अगला' : 'Next'} id="next-button" onClick={changeQuestion} />
           </>
         )}
       </div>

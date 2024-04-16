@@ -47,7 +47,7 @@ const VictimsPage = () => {
 
   React.useEffect(() => {
     getUsers();
-  }, )
+  }, [])
 
   async function sendmail(name, email, adharNumber) {
     // console.log(name,email,adharNumber)
@@ -93,11 +93,11 @@ const VictimsPage = () => {
   }
 
   return (
-    <div className="victimspage2451">
+    <div className="victimspage2451" style={{  width: '100vw'}}>
       <div className='vichead2451'> <Header /></div>
       <div className='vichead2451'><Navigation /></div>
       <div className='vicverify2451'> Affected People Information</div>
-      <div className='cols-row-md-3 viccard2450' style={{ width: '96rem' }}>
+      <div className='cols-row-md-3 viccard2450' style={{ width: '90vw',overflowX:"hidden" }}>
         {users.map((user) => (
           <Card className='viccard2451'>
             <Card.Img variant="top" src={user.image} className='vicimage2451' />

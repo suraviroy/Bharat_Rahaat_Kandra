@@ -62,7 +62,7 @@ def match_features(descriptors1, descriptors2):
     # Apply ratio test to select good matches
     good_matches = []
     for m, n in matches:
-        if m.distance < 0.81 * n.distance:
+        if m.distance < 0.82 * n.distance:
             good_matches.append(m)
     return good_matches
 

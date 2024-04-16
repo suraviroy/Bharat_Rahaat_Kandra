@@ -7,7 +7,7 @@ const LanguageSelector = ({ onChange }) => {
     <div className="language-selector">
        <LanguageIcon className="language-icon"/>
       <select onChange={onChange}>
-        <option>Select Language</option>
+        <option value="sl">Select Language</option>
         <option value="en">English</option>
         <option value="hi">Hindi</option>
         <option value="be">Bengali</option>

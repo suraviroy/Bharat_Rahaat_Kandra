@@ -129,9 +129,10 @@
   align-items: center;
   max-height: 470px;
   /* height: 60vh; */
-  max-width: 75vw;
+  max-width: 80vw;
+  padding-right: 2.5vw;
   overflow-y: auto;
-  margin-left: 230px;
+  margin-left: 240px;
   padding-left: -60px;
   /* border: 2px solid black; */
   justify-content: space-between;

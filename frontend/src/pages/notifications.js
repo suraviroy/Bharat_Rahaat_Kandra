@@ -8,6 +8,26 @@ import img27 from '../images/floods.png';
 import Languageoption from './Awareness/language-dropdown';
 
 const languagecontent = {
+    sl: {
+        title: 'Government sent you an alert!',
+        content1: `An earthquake struck the region near the Kalimpong district of West Bengal some while ago.
+        Residents near this region are advised to be on alert and take the necessary precautions.
+        Please feel free to reach out to us in the helpline numbers provided below in case of emergency.`,
+        help: 'Get Help',
+        content2: `Cyclone Michuang is expected to strike the Bay of Bengal in the next two days.
+        There is a high chance of strong winds and heavy rains in the entire Eastern Coast of India.
+        Please keep to the indoors as far as possible.
+        Please feel free to reach out to us in the helpline numbers provided below in case of emergency.`,
+        content3: `Heavy rains is expected in the state Of Assam over the next 3 days.
+        There are high chances of the nearby areas facing floods.
+        Please keep to the indoors as far as possible.
+        Please feel free to reach out to us in the helpline numbers provided below in case of emergency.`,
+        emhelp: `Emergency Helpline`,
+        ponum: `Police: +91 33 2214 5000`,
+        mednum: `Medical: +91 9830079999`,
+        finum: `Fire Station: +91 033-22440101`,
+        clobut: 'Close'
+    },
     en: {
         title: 'Government sent you an alert!',
         content1: `An earthquake struck the region near the Kalimpong district of West Bengal some while ago.
