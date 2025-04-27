@@ -18,7 +18,8 @@ import tkinter as tk
 
 
 print("Welcome")
-client = pymongo.MongoClient("mongodb+srv://rsuravi447:PtCLVT7Q0Xuk3khG@cluster1.wgel2hb.mongodb.net/Disaster?retryWrites=true&w=majority")
+# client = pymongo.MongoClient("mongodb+srv://rsuravi447:PtCLVT7Q0Xuk3khG@cluster1.wgel2hb.mongodb.net/Disaster?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://pulmocareresearch01:4LkI6BR9No100w5e@cluster-pulmocare.stgl2br.mongodb.net/Disaster?retryWrites=true&w=majority")
 db = client.get_database("Disaster")
 agencies_collection = db.get_collection("victims")
 
@@ -142,8 +143,8 @@ def record1(name,best_match_accuracy):
     
     label = Label(root, text = name, fg = "Red",font=("times new roman",20, "bold"))  
     label.place(x=50, y=330) 
-    label8 = Label(root, text = str(best_match_accuracy)+"% Accuracy ", fg = "black",font=("times new roman",12))  
-    label8.place(x=50, y=370) 
+    # label8 = Label(root, text = str(best_match_accuracy)+"% Accuracy ", fg = "black",font=("times new roman",12))  
+    # label8.place(x=50, y=370) 
 
     Label(root, text="General Information:", font=("times new roman", 16), fg="black").place(x=305, y=25)
     

@@ -17,7 +17,9 @@ import tkinter as tk
 
 
 print("Welcome")
-client = pymongo.MongoClient("mongodb+srv://rsuravi447:PtCLVT7Q0Xuk3khG@cluster1.wgel2hb.mongodb.net/Disaster?retryWrites=true&w=majority")
+"""client = pymongo.MongoClient("mongodb+srv://rsuravi447:PtCLVT7Q0Xuk3khG@cluster1.wgel2hb.mongodb.net/Disaster?retryWrites=true&w=majority")"""
+client = pymongo.MongoClient("mongodb+srv://pulmocareresearch01:4LkI6BR9No100w5e@cluster-pulmocare.stgl2br.mongodb.net/Disaster?retryWrites=true&w=majority")
+
 db = client.get_database("Disaster")
 agencies_collection = db.get_collection("victims")
 

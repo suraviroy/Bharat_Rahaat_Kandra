@@ -14,7 +14,7 @@ function CardExample() {
     <div className='animation' data-aos='zoom-in'>
       <div className="Case12 d-flex justify-content-around">
       <Card style={{ width: '23rem' }}>
-        <Card.Img className='pic1' variant="top" src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2020/7/Desk/2020_7$largeimg_1461744707.jpeg" />
+        <Card.Img className='pic1' variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx9pZu4hmN6-BMF3-31n3ylU4zSNyC2gUoXYq1deu8HPccRZwGsgiAV_xLlNRRaS64NMc&usqp=CAU" />
         <Card.Body>
           <Card.Title className='title'><b>RESCUE DURING PANDEMIC</b></Card.Title>
           <Card.Text>

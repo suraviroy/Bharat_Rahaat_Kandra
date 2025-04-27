@@ -13,6 +13,13 @@
   /* overflow: auto; */
  
 }
+.blankspace01{
+  padding-bottom: 2vh;
+}
+.resource-options01{
+  width: 20vw;
+
+}
 .title01{
 color:hsl(0, 0%, 100%);
 margin-left: 0px;

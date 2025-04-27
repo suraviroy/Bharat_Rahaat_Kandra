@@ -107,7 +107,7 @@ def finger_recognition(test_image):
         best_match_image = dataset_images[best_match_index]
         best_match_filename = dataset_filenames[best_match_index]  # Get filename
         print("Fingerprint recognized with filename:", best_match_filename)  # Print filename
-        print("Accuracy:", best_match_accuracy)
+        # print("Accuracy:", best_match_accuracy)
 
         split_name = best_match_filename.split("_")
         full_name = split_name[0]
