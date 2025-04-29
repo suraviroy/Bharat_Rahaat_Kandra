@@ -24,16 +24,51 @@ const firebaseConfig = {
     messagingSenderId: "737022141711",
     appId: "1:737022141711:web:c5c36f21d9f12c72e9ca7a",
     measurementId: "G-K5H8F38LMZ"
-  };
-  if (!firebase.apps.length) {
+};
+if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
-  }
+}
 
 
 export default function Tracking() {
 
-    const [accidentMarkers, setAccidentMarkers] = useState([]);
 
+    const locationLad = [
+        {
+            name: "Ruby General Hospital",
+            latitude: 22.579720,
+            longitude: 88.414951
+        },
+        {
+            name: "AMRI Hospital",
+            latitude: 22.597711,
+            longitude: 88.422130
+        },
+        {
+            name: "Apollo Gleneagles Hospital",
+            latitude: 22.633877,
+            longitude: 88.419007
+        },
+        {
+            name: "Fortis Hospital",
+            latitude: 22.585500,
+            longitude: 88.405270
+        },
+        {
+            name: "Manipal Hospital",
+            latitude: 22.5575072,
+            longitude: 88.376811
+        },
+        {
+            name: "Institute of Pulmocare & Research",
+            latitude: 22.5799504,
+            longitude: 88.4748083
+        }
+    ];
+
+
+    const [accidentMarkers, setAccidentMarkers] = useState([]);
+    const [hasData, setHasData] = useState(false);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
     //const [mes, setmes] = useState('abce');
@@ -61,10 +96,10 @@ export default function Tracking() {
         setIsOpenArray(Array(data.data.length).fill(false));
     }
 
-    
+
     const customIconHospital = new Icon({
         iconUrl: "https://res.cloudinary.com/dosofpk8l/image/upload/v1745731130/image-removebg-preview_1_pyzyyl.png",
-        iconSize: [38, 38]
+        iconSize: [35, 30]
     });
 
     React.useEffect(() => {
@@ -73,97 +108,90 @@ export default function Tracking() {
     }, [])
 
     const getUsersA = async () => {
-        const response = await fetch('http://localhost:8080/alertRouter/MapAlert', {
-            method: 'GET',
-        })
-        const data = await response.json();
-        const updatedUsers = (data.data || []).map(user => {
-            // Check if message exists and set "mes" accordingly
-            const messageExists = user.message !== undefined && user.message !== null;
-            const messsage = messageExists ? "vistic rescude" : "abc";  // Set message
-    
-            // Return updated user object with the new "mes" field
-            return {
-                ...user,    // retain all existing user fields
-                mes : messsage        // add "mes" field
-            };
-        });
-        setUsers1(updatedUsers);
-        setIsOpenArray1(Array(updatedUsers.length).fill(false));
-    }
+        try {
+            const response = await fetch('http://localhost:8080/alertRouter/MapAlert', {
+                method: 'GET',
+            });
+            const data = await response.json();
+
+            const updatedUsers = (data.data || []).map(user => {
+                const messageExists = user.message !== undefined && user.message !== null;
+                const messsage = messageExists ? "vistic rescude" : "abc";
+
+                return {
+                    ...user,
+                    mes: messsage
+                };
+            });
+
+            setUsers1(updatedUsers);
+            setIsOpenArray1(Array(updatedUsers.length).fill(false));
+
+            // Check if there's any data and update the hasData state
+            setHasData(updatedUsers.length > 0);
+        } catch (error) {
+            console.error("Error fetching users:", error);
+            setHasData(false);
+        }
+    };
+
 
     React.useEffect(() => {
         getUsersA();
 
-    }, [])
-    
-    useEffect(() => {
-        const database = firebase.database();
-        const markersRef = database.ref("sensor_data");
-    
-        markersRef.on("value", (snapshot) => {
-          const data = snapshot.val();
-          if (data) {
-            const newMarkers = Object.keys(data).map((key) => {
-              const latitude = parseFloat(data[key].Latitude);
-              const longitude = parseFloat(data[key].Longitude);
-              const magnitude = parseFloat(data[key].AccelerationMagnitude);
-              const temperature = parseFloat(data[key].Temperature);
-            
-               // Check if message exists
-              const messageExists = data[key].message !== undefined && data[key].message !== null;
-              const message = messageExists ? "victim rescue" : "abc"; // set based on existence
-            
-              if (!isNaN(latitude) && !isNaN(longitude)) {
-                return {
-                  latalert: latitude,         // Match your Circle/Marker props
-                  lonalert: longitude,         // Match your Circle/Marker props
-                  alertsender: `Accident Detected Device`, // Just giving a static name (you can customize)
-                  contactNumber: "",           // Optional fields if needed
-                  email: "",
-                  address: "",
-                  mes: message,
-                  magnitude,
-                  temperature
-                };
-              } else {
-                return null; // skip if invalid
-              }
-            }).filter(marker => marker !== null);
-    
-            setUsers1(newMarkers); // Set users1 with the Firebase data
-            setIsOpenArray1(Array(newMarkers.length).fill(false)); // Update popup open states
-          }
-        });
-    
-        return () => {
-          markersRef.off(); // Always clean up the listener
-        };
-    }, );
-    
-    
+    }, [users1])
+
+
+
     // useEffect(() => {
-    //     navigator.geolocation.getCurrentPosition((position) => {
-    //         setLat(position.coords.latitude);
-    //         setLon(position.coords.longitude);
+    //     const database = firebase.database();
+    //     const markersRef = database.ref("sensor_data");
+
+    //     markersRef.on("value", (snapshot) => {
+    //         const data = snapshot.val();
+    //         if (data) {
+    //             const newMarkers = Object.keys(data).map((key) => {
+    //                 const latitude = parseFloat(data[key].Latitude);
+    //                 const longitude = parseFloat(data[key].Longitude);
+    //                 const magnitude = parseFloat(data[key].AccelerationMagnitude);
+    //                 const temperature = parseFloat(data[key].Temperature);
+
+    //                 // Check if message exists
+    //                 const messageExists = data[key].message !== undefined && data[key].message !== null;
+    //                 const message = messageExists ? "victim rescue" : "abc"; 
+
+    //                 if (!isNaN(latitude) && !isNaN(longitude)) {
+    //                     return {
+    //                         latalert: latitude,         
+    //                         lonalert: longitude,         
+    //                         alertsender: `Accident Detected Device`, 
+    //                         contactNumber: "",          
+    //                         email: "",
+    //                         address: "",
+    //                         mes: message,
+    //                         magnitude,
+    //                         temperature
+    //                     };
+    //                 } else {
+    //                     return null; // skip if invalid
+    //                 }
+    //             }).filter(marker => marker !== null);
+
+    //             setUsers1(newMarkers); // Set users1 with the Firebase data
+    //             setIsOpenArray1(Array(newMarkers.length).fill(false));
+    //             setHasData(newMarkers.length > 0); 
+    //         } else {
+    //             setHasData(false); // No data case
+    //         }
     //     });
-    // }, []);
 
-    // Uncomment and modify this function as needed
-    // const getUserGeolocationDetails = () => {
-    //     fetch("https://geolocation-db.com/json/e5e47150-bc2c-11ed-9b49-492949f4ff3d")
-    //         .then(response => response.json())
-    //         .then(data => setDetails(data))
-    //         .catch(error => console.error(error));
-    // };
+    //     return () => {
+    //         markersRef.off(); // Always clean up the listener
+    //     };
+    // },);
 
-    // const markers = [
 
-    //     {
-    //         geocode: [lat, lon],
-    //         popup: "Parthib Das"
-    //     }
-    // ];
+
     return (
         <div className="map245">
             {/* <div className='ttttit'> <Navbarrecords /></div> */}
@@ -189,65 +217,58 @@ export default function Tracking() {
                     </Marker>
 
                 ))}
-                {/* {users.map((user) => (
-            <AgencyDetailsPopup isOpen={showDetails} onClose={() => setShowDetails(false)} agencyname={user.nagency} 
-            contactNumber={user.contactNumber} email= {user.email} address={user.address}
-            pin= {user.pin} state={user.state}  />
-            ))} */}
-                {users1.map((user1,index) => (
-                     user1.mes !== "victim rescue" && (
-                    <Circle
-                        center={[user1.latalert, user1.lonalert]}
-                        radius={700}
-                        color="red"
-                        fillColor="red"
-                        fillOpacity={0.3}
-                        className="circle-pulse81"
-                    // Use the same customIcon for the Circle
-                    // icon={customIcon1}
-                    >
-                         <Popup open={isOpenArray1[index]}>
-                            Sender : {user1.alertsender}
-                            <button className="trbtn01" onClick={() => setIsOpenArray1(prev => prev.map((val, i) => i === index ? !val : val))}>
-                                More Info
-                            </button>
-                            <AgencyDetailAlert isOpen={isOpenArray1[index]} onClose={() => setIsOpenArray1(prev => prev.map((val, i) => i === index ? !val : val))} agencyname={user1.alertsender}
-                                contactNumber={user1.contactNumber} email={user1.email} address={user1.address}
-                                />
-                        </Popup>
-                    </Circle>)))}
-                {users1.map((user1,index) => (
-                    user1.mes !== "victim rescue" && (
-                    <Marker
 
-                        position={[user1.latalert, user1.lonalert]}
-                        icon={customIcon1}
-                        key={user1.popup}
-                    // zIndexOffset={1000} // Ensure the marker (image) is above the Circle
-                    >
-                        {/* <Popup open={isOpenArray1[index]}>
-                            Sender : {user1.alertsender}
-                            <button className="trbtn01" onClick={() => setIsOpenArray1(prev => prev.map((val, i) => i === index ? !val : val))}>
-                                More Info
-                            </button>
-                            <AgencyDetailAlert isOpen={isOpenArray1[index]} onClose={() => setIsOpenArray1(prev => prev.map((val, i) => i === index ? !val : val))} agencyname={user1.alertsender}
-                                contactNumber={user1.contactNumber} email={user1.email} address={user1.address}
+                {users1.map((user1, index) => (
+                    user1.mes !== "victim rescue" && (
+                        <Circle
+                            center={[user1.latalert, user1.lonalert]}
+                            radius={700}
+                            color="red"
+                            fillColor="red"
+                            fillOpacity={0.3}
+                            className="circle-pulse81"
+                        // Use the same customIcon for the Circle
+                        // icon={customIcon1}
+                        >
+                            <Popup open={isOpenArray1[index]}>
+                                Sender : {user1.alertsender}
+                                <button className="trbtn01" onClick={() => setIsOpenArray1(prev => prev.map((val, i) => i === index ? !val : val))}>
+                                    More Info
+                                </button>
+                                <AgencyDetailAlert isOpen={isOpenArray1[index]} onClose={() => setIsOpenArray1(prev => prev.map((val, i) => i === index ? !val : val))} agencyname={user1.alertsender}
+                                    contactNumber={user1.contactNumber} email={user1.email} address={user1.address}
                                 />
-                        </Popup> */}
-                    </Marker>
-                )))}
-                 <Marker
-                position={[22.5799504, 88.4748083]}
-                icon={customIconHospital} // You can replace with a different icon if you want
-            >
-                <Popup>
-                    <div>
-                        <strong>Institute of Pulmocare & Research</strong>
-                    </div>
-                </Popup>
-            </Marker>
+                            </Popup>
+                        </Circle>)))}
+                {users1.map((user1, index) => (
+                    user1.mes !== "victim rescue" && (
+                        <Marker
+
+                            position={[user1.latalert, user1.lonalert]}
+                            icon={customIcon1}
+                            key={user1.popup}
+                        // zIndexOffset={1000} // Ensure the marker (image) is above the Circle
+                        >
+
+                        </Marker>
+                    )))}
+                {hasData &&
+                    locationLad.map((location, index) => (
+                        <Marker
+                            key={index}
+                            position={[location.latitude, location.longitude]}
+                            icon={customIconHospital}
+                        >
+                            <Popup>
+                                <div>
+                                    <strong>{location.name}</strong><br />
+                                </div>
+                            </Popup>
+                        </Marker>
+                    ))
+                }
             </MapContainer>
-            
+
         </div>
     )
 }

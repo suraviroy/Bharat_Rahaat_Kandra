@@ -172,7 +172,7 @@ const lasthospitalalert = async (req, res) => {
 const allhospitalalerts = async (req, res) => {
   try {
     // Fetch all alerts, sorted by date and time
-    const allAlerts = await HospitalAlert.find().sort({ date: -1, time: -1 });
+    const allAlerts = await (await HospitalAlert.find()).reverse();
 
     if (allAlerts.length === 0) {
       return res.status(404).json({ message: 'No hospital alerts found' });
