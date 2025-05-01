@@ -153,15 +153,14 @@ const sendhospitalalert = async (req, res) => {
 
 const lasthospitalalert = async (req, res) => {
   try {
-    // Fetch the last alert, sorted by createdAt (or you could use date/time if needed)
-    const lastAlert = await HospitalAlert.findOne().sort({ date: -1,  
-      time: -1  });
+    const alerts = await HospitalAlert.find();
 
-    if (!lastAlert) {
+    if (alerts.length === 0) {
       return res.status(404).json({ message: 'No hospital alerts found' });
     }
 
-    // Respond with the last hospital alert
+    const lastAlert = alerts[alerts.length - 1]; // Get the last item in the array
+
     res.status(200).json(lastAlert);
   } catch (error) {
     console.error('Error fetching last hospital alert:', error);
