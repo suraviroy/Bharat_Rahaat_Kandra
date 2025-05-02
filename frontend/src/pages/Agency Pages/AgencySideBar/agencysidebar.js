@@ -23,6 +23,8 @@ import { useEffect } from "react";
 import detect from "../../../images/group.gif"
 import MissingListmain from '../AgencyActivity/MissingList/MissingListMain';
 
+import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
+
 
 const Agencysidebar = (props) => {
   const [showResourcePopup, setShowResourcePopup] = useState(false);
@@ -182,7 +184,7 @@ const Agencysidebar = (props) => {
   };
 
   // const cancelResourceSelectionH = () => {
-   
+
   //   setCustomResourceTypeH('');
   //   closeResourcePopup();
   // };
@@ -225,7 +227,7 @@ const Agencysidebar = (props) => {
   };
 
   const callDoctor = () => {
-  
+
     fetch('http://localhost:8080/alertRouter/sendhospitalalert', {
       method: 'POST',
       headers: {
@@ -367,6 +369,59 @@ const Agencysidebar = (props) => {
       });
   };
 
+  const satteliteimg = () => {
+    //setShowDetectPopup(false);
+    fetch('http://127.0.0.1:5000/satteliteimg')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Notification triggeredddd:', data.message);
+      })
+      .catch(error => {
+        console.error('Error triggering notification:', error);
+      });
+  };
+
+
+ 
+  
+  //const [customResourceTypeH, setCustomResourceTypeH] = useState("");
+  //const [accidenttype, setAccidentType] = useState("");
+  const [currentInput, setCurrentInput] = useState("people"); // control which input is being filled
+
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition
+  } = useSpeechRecognition();
+
+
+  
+  const voicetotext = () => {
+    resetTranscript(); // clear old result
+    if (!customResourceTypeH) {
+      setCurrentInput("people");
+    } else {
+      setCurrentInput("accident");
+    }
+    SpeechRecognition.startListening({ continuous: false, language: 'en-IN' });
+  };
+
+  useEffect(() => {
+    if (!listening && transcript) {
+      if (currentInput === "people") {
+        setCustomResourceTypeH(transcript);
+      } else if (currentInput === "accident") {
+        setaccidenttype(transcript);
+      }
+    }
+  }, [transcript, listening]);
+
+  if (!browserSupportsSpeechRecognition) {
+    return <p>Your browser does not support speech recognition.</p>;
+  }
+
+
   return (
     <div className='agencysideBar flex'>
       <div className='agencylogoDiv flex'>
@@ -450,9 +505,9 @@ const Agencysidebar = (props) => {
           </a>
         </li>
         <li className='listItem01'>
-          <a href="#" className='menuLink01 flex' onClick={openVolunteerPopup}>
+          <a href="#" className='menuLink01 flex' onClick={satteliteimg}>
             <IoIosPeople className='icon01' />
-            <span className='smallText01'>Volunteer</span>
+            <span className='smallText01'>Sattelite</span>
           </a>
         </li>
         <li className='listItem01'>
@@ -595,7 +650,7 @@ const Agencysidebar = (props) => {
                 <div className="resource-options">
                   <label>
                     <input
-                    className="resource-options01"
+                      className="resource-options01"
                       type="text"
                       required
                       placeholder="How many people need treatment?"
@@ -606,7 +661,7 @@ const Agencysidebar = (props) => {
                   <div className='blankspace01'> </div>
                   <label>
                     <input
-                    className="resource-options01"
+                      className="resource-options01"
                       type="text"
                       required
                       placeholder="Accident/Disaster Type"
@@ -619,6 +674,7 @@ const Agencysidebar = (props) => {
                 <div className="popup-actions01">
                   <button className='send01' onClick={callDoctor}>Notify</button>
                   <button className='cancel01' onClick={closeHealthPopup}>Cancel</button>
+                  <button className='send01' onClick={voicetotext}>Voice</button>
                 </div>
               </div>
             </div>
